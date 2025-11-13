@@ -29,14 +29,19 @@ Check out the live website: **[https://agkotu-portfolio-2w4s.vercel.app/]([Live 
 ## Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/4amogelangkotu/agkotu-portfolio.git
    ```
+
 2. Navigate to the project directory:
+
    ```bash
    cd agkotu-portfolio
    ```
+
 3. Install the dependencies:
+
    ```bash
    npm install
    ```
@@ -71,7 +76,7 @@ Serves the production build locally.
 
 ## File Structure
 
-```
+``` text
 .
 ├── public
 │   └── vite.svg
@@ -106,3 +111,11 @@ Serves the production build locally.
 ├── README.md
 └── vite.config.ts
 ```
+
+## 📞 Contact Me
+
+I'd love to hear from you!
+
+- **Email:** [amogelangkotu@icloud.com](mailto:amogelangkotu@icloud.com)
+- **LinkedIn:** [linkedin.com/in/amogelangkotu/](https://www.linkedin.com/in/amogelangkotu/)
+- **Twitter:** [@giftamogelangg](https://twitter.com/giftamogelangg)
