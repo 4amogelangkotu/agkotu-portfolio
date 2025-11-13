@@ -33,7 +33,6 @@ function SocialLink({ platform, handle, icon, url }: SocialLinkProps) {
 export default function Contacts() {
     const handleDownloadCV = () => {
         const cvUrl = '/src/assets/ag-kotu-cv.pdf';
-
         const link = document.createElement('a');
         link.href = cvUrl;
         link.download = 'ag-kotu-cv.pdf';
