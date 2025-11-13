@@ -1,5 +1,5 @@
 // components/Contacts.tsx
-
+import cvFile from '/src/assets/ag-kotu-cv.pdf';
 import TerminalWindowBar from "../TerminalWindowBar";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -32,9 +32,8 @@ function SocialLink({ platform, handle, icon, url }: SocialLinkProps) {
 
 export default function Contacts() {
     const handleDownloadCV = () => {
-        const cvUrl = '/src/assets/ag-kotu-cv.pdf';
         const link = document.createElement('a');
-        link.href = cvUrl;
+        link.href = cvFile;
         link.download = 'ag-kotu-cv.pdf';
         document.body.appendChild(link);
         link.click();
