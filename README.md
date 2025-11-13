@@ -8,7 +8,7 @@ Check out the live website: **[https://agkotu-portfolio-2w4s.vercel.app/]([Live 
 
 ![Portfolio Screenshot](src\assets\portfolio-screenshot.png)
 
-## ✨ Features
+## Features
 
 - **Fully Responsive:** Looks great on desktops, tablets, and mobile devices.
 - **Modern UI/UX:** Clean, minimal, and accessible design.
@@ -112,7 +112,7 @@ Serves the production build locally.
 └── vite.config.ts
 ```
 
-## 📞 Contact Me
+## Contact Me
 
 I'd love to hear from you!
 
