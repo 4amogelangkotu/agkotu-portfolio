@@ -1,73 +1,108 @@
-# React + TypeScript + Vite
+# AGKotu Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a personal portfolio website built with React, TypeScript, and Vite. It showcases my projects and skills, with a focus on creating a unique and engaging user experience through the use of animations and interactive elements.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out the live website: **[https://agkotu-portfolio-2w4s.vercel.app/]([Live Demo Link])**
 
-## React Compiler
+![Portfolio Screenshot](src\assets\portfolio-screenshot.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **Fully Responsive:** Looks great on desktops, tablets, and mobile devices.
+- **Modern UI/UX:** Clean, minimal, and accessible design.
+- **Fast & Optimized:** Built for performance with optimized assets and best practices.
+- **Functional Contact Section:** The email and social media links navigate to their respective pages.
+- **Downloadable CV:** My current CV document is available for download.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technologies Used
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [GSAP](https://greensock.com/gsap/)
+- [Matter.js](https://brm.io/matter-js/)
+- [Lenis](https://lenis.studio/) for smooth scrolling
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/4amogelangkotu/agkotu-portfolio.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd agkotu-portfolio
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm run dev`
+
+Runs the app in the development mode.
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+The page will reload if you make edits.
+You will also see any lint errors in the console.
+
+### `npm run build`
+
+Builds the app for production to the `dist` folder.
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.
+Your app is ready to be deployed!
+
+### `npm run lint`
+
+Lints the project files using ESLint.
+
+### `npm run preview`
+
+Serves the production build locally.
+
+## File Structure
+
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+.
+├── public
+│   └── vite.svg
+├── src
+│   ├── assets
+│   │   └── a-logo.svg
+│   ├── components
+│   │   ├── sections
+│   │   │   ├── Contacts.tsx
+│   │   │   ├── Education.tsx
+│   │   │   ├── Header.tsx
+│   │   │   └── Projects.tsx
+│   │   ├── ui
+│   │   │   └── button.tsx
+│   │   ├── Description.tsx
+│   │   ├── FallingText.tsx
+│   │   ├── GlareHover.tsx
+│   │   ├── LetterGlitch.tsx
+│   │   ├── ScrollStack.tsx
+│   │   ├── ShinyText.tsx
+│   │   ├── Squares.tsx
+│   │   └── TerminalWindowBar.tsx
+│   ├── lib
+│   │   └── utils.ts
+│   ├── App.css
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+├── .gitignore
+├── index.html
+├── package.json
+├── README.md
+└── vite.config.ts
 ```
