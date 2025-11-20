@@ -1,5 +1,5 @@
 // components/Contacts.tsx
-import cvFile from '/src/assets/ag-kotu-cv.pdf';
+import cvFile from '/src/assets/agkotu-cv.pdf';
 import TerminalWindowBar from "../TerminalWindowBar";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -34,7 +34,7 @@ export default function Contacts() {
     const handleDownloadCV = () => {
         const link = document.createElement('a');
         link.href = cvFile;
-        link.download = 'ag-kotu-cv.pdf';
+        link.download = 'agkotu-cv.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
