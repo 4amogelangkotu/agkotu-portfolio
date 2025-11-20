@@ -24,7 +24,7 @@ export default function Projects() {
                                 <p className="text-gray-300 text-center mb-6">{project.date}</p>
 
                                 {/* Display a brief description or the first few sections for the summary view */}
-                                <div className="grid gap-6 w-4xl mx-auto md:grid-cols-1">
+                                <div className="grid gap-6 w-full mx-auto md:grid-cols-1">
                                     <Description
                                         title={project.sections[0].title}
                                         items={project.sections[0].items}
