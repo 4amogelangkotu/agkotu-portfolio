@@ -2,7 +2,6 @@
 
 import Description from "../Description";
 import ShinyText from "../ShinyText";
-import GlareHover from "../GlareHover";
 
 export default function Projects() {
     const eThriftingProject = [
@@ -103,8 +102,48 @@ export default function Projects() {
         }
     ];
 
-    const eThriftingTech = ['Visual Basic .NET', 'SQL', 'HTML', 'CSS', 'JavaScript', 'Git'];
-    const benchmarkTraderTech = ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Prisma', 'Supabase', 'Flutter', 'Git'];
+    // NEW PROJECT ADDED HERE
+    const trafficSignProject = [
+        {
+            title: "Project Overview & Goal",
+            items: [
+                "Developed an intelligent, graph-based educational tool to detect and classify South African traffic signs",
+                "Aimed to enhance road safety awareness through interactive visual learning methods",
+                "Demonstrated advanced algorithmic design and core language implementation without external ML frameworks"
+            ]
+        },
+        {
+            title: "Algorithmic Implementation",
+            items: [
+                "Designed and implemented a custom **Graph Neural Network (GNN)** classification model **entirely in pure Java**",
+                "Engineered a **k-Nearest Neighbors (k-NN) graph structure** for relating visually similar signs",
+                "Utilized **Euclidean Distance** and **Cosine Similarity** metrics for node similarity calculations",
+                "Implemented feature normalization and feature propagation logic for context-enriched classification"
+            ]
+        },
+        {
+            title: "Core Logic & Image Processing",
+            items: [
+                "Engineered the system's core logic using image processing techniques to detect signs in images",
+                "Feature extraction based on **Color** (red, blue, yellow), **Shape** (triangle, circle, octagon), **Edge Density**, and **Aspect Ratio**",
+                "Achieved robust classification into South African categories (Regulatory, Warning, Informational)",
+                "Designed the system to be scalable and expandable for new signs without full re-training"
+            ]
+        },
+        {
+            title: "Technical Stack & Outcome",
+            items: [
+                "Primary implementation language: **Java**",
+                "Focus on core data structures and custom algorithm design",
+                "Outcome: A functional tool demonstrating the power of graph structures for visual pattern recognition"
+            ]
+        }
+    ];
+    // END NEW PROJECT
+
+    const eThriftingTech = ['Visual Basic .NET', 'SQL', 'HTML', 'CSS', 'JavaScript', 'Git', 'Agile'];
+    const benchmarkTraderTech = ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Prisma', 'Supabase', 'Flutter', 'Git', 'UML'];
+    const trafficSignTech = ['Java (Core)', 'GNN (Custom)', 'k-NN', 'Image Processing', 'Algorithms'];
 
     return (
         <section className="py-12 px-6 bg-linear-to-b from-[#161921] to-black">
@@ -118,33 +157,20 @@ export default function Projects() {
                     />
                 </div>
 
-                {/* E-Thrifting Project Card with Glare Effect */}
+                {/* --- Traffic Sign Detection Project Card --- */}
                 <div className="mb-12">
-                    <GlareHover
-                        width="100%"
-                        height="auto"
-                        background="#1a1f2e"
-                        borderRadius="12px"
-                        borderColor="#2d3748"
-                        glareColor="#ffffff"
-                        glareOpacity={0.15}
-                        glareAngle={-30}
-                        glareSize={300}
-                        transitionDuration={600}
-                        playOnce={false}
-                        className="p-6"
-                    >
+                    <div className="p-6">
                         <div>
-                            <h3 className="text-xl text-green-400 mb-4 text-center">E-Thrifting Website</h3>
-                            <p className="text-gray-300 text-center mb-6">Jul 2024 - Oct 2024 | Academic Group Project</p>
+                            <h3 className="text-xl text-green-400 mb-4 text-center">Graph-Based Traffic Sign Detection & Classification</h3>
+                            <p className="text-gray-300 text-center mb-6">Academic Project | Java & Algorithms Focus</p>
                             <div className="grid gap-6 w-1.500 mx-50 md:grid-cols-1">
-                                {eThriftingProject.map((item) => (
+                                {trafficSignProject.map((item) => (
                                     <Description key={item.title} title={item.title} items={item.items} />
                                 ))}
                             </div>
                             <div className="mt-6 text-center">
                                 <div className="flex flex-wrap justify-center gap-2 mb-4">
-                                    {eThriftingTech.map((tech) => (
+                                    {trafficSignTech.map((tech) => (
                                         <span
                                             key={tech}
                                             className="bg-[#161921] border border-gray-700 text-blue-100 px-3 py-1 rounded-lg text-sm transition-all duration-300 ease-in-out hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 hover:scale-105 cursor-pointer"
@@ -155,23 +181,12 @@ export default function Projects() {
                                 </div>
                             </div>
                         </div>
-                    </GlareHover>
+                    </div>
                 </div>
 
-                {/* Benchmark Trader Project Card with Glare Effect */}
-                <div>
-                    <GlareHover
-                        width="100%"
-                        height="auto"
-                        background="#1a1f2e"
-                        borderRadius="12px"
-                        borderColor="#2d3748"
-                        glareColor="#ffffff"
-                        glareOpacity={0.15}
-                        glareAngle={-30}
-                        glareSize={300}
-                        transitionDuration={600}
-                        playOnce={false}
+                {/* --- Benchmark Trader Project Card with Glare Effect --- */}
+                <div className="mb-12">
+                    <div
                         className="p-6"
                     >
                         <div>
@@ -201,7 +216,36 @@ export default function Projects() {
                                 </p>
                             </div>
                         </div>
-                    </GlareHover>
+                    </div>
+                </div>
+
+                {/* --- E-Thrifting Project Card with Glare Effect --- */}
+                <div className="mb-12">
+                    <div
+                        className="p-6"
+                    >
+                        <div>
+                            <h3 className="text-xl text-green-400 mb-4 text-center">E-Thrifting Website</h3>
+                            <p className="text-gray-300 text-center mb-6">Jul 2024 - Oct 2024 | Academic Group Project</p>
+                            <div className="grid gap-6 w-1.500 mx-50 md:grid-cols-1">
+                                {eThriftingProject.map((item) => (
+                                    <Description key={item.title} title={item.title} items={item.items} />
+                                ))}
+                            </div>
+                            <div className="mt-6 text-center">
+                                <div className="flex flex-wrap justify-center gap-2 mb-4">
+                                    {eThriftingTech.map((tech) => (
+                                        <span
+                                            key={tech}
+                                            className="bg-[#161921] border border-gray-700 text-blue-100 px-3 py-1 rounded-lg text-sm transition-all duration-300 ease-in-out hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 hover:scale-105 cursor-pointer"
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
