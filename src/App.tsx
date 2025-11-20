@@ -1,12 +1,10 @@
-// App.tsx
 import Header from './components/sections/Header';
 import Education from './components/sections/Education';
 import Contacts from './components/sections/Contacts';
 import Projects from './components/sections/Projects';
 import LetterGlitch from './components/LetterGlitch';
-// import MagicBento from './components/MagicBento';
-// import Squares from './components/Squares';
 
+// No changes needed in App.tsx. It remains the content for the '/' route.
 export default function App() {
   const headerData = {
     name: "Amogelang Gift Kotu",
@@ -40,7 +38,7 @@ export default function App() {
       {/* Rest of the content without glitch background */}
       <div >
         <Education />
-        <Projects />
+        <Projects /> {/* Projects component now contains <Link> for navigation */}
       </div>
 
       <section className="relative min-h-screen">
