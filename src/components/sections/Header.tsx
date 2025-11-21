@@ -1,49 +1,14 @@
-// components/Header.tsx
+// components/Header.tsx (Updated Imports)
 
 import TerminalWindowBar from "../TerminalWindowBar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faReact,
-    faJs,
-    faNodeJs,
-    faGitAlt,
-    faHtml5,
-    faCss3Alt,
-    faJava,
-    faMicrosoft,
-    type IconDefinition
-} from "@fortawesome/free-brands-svg-icons";
-import {
-    faDatabase,
-    faCode,
-    faServer,
-    faMicrochip
-} from "@fortawesome/free-solid-svg-icons";
+// Import from the new utility file instead of directly here
+import { skillIcons, FontAwesomeIcon, faCode } from "../skillIcons";
 
 interface HeaderProps {
     name: string;
     title: string;
     skills: string[];
 }
-
-// Map skills to FontAwesome icons
-const skillIcons: { [key: string]: IconDefinition } = {
-    "Visual Basic": faMicrosoft,
-    "C++": faCode,
-    "Java": faJava,
-    "SQL": faDatabase,
-    "C#": faMicrosoft,
-    "HTML": faHtml5,
-    "CSS": faCss3Alt,
-    "JavaScript": faJs,
-    "TypeScript": faJs, // TypeScript uses JS icon (you can find a specific TS icon in pro version)
-    "React": faReact,
-    "Node.js": faNodeJs,
-    "Express": faServer,
-    "Supabase": faDatabase, // Supabase is a database service
-    "Git": faGitAlt,
-    "80x86 Assembly": faMicrochip
-};
 
 export default function Header({ name, title, skills }: HeaderProps) {
     return (

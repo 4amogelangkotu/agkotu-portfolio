@@ -1,4 +1,5 @@
 // src/data/projectsData.ts
+import React from 'react';
 
 // Define the structure for a section item
 interface ProjectSectionItem {
@@ -8,10 +9,10 @@ interface ProjectSectionItem {
 
 // Define the structure for a single project
 interface ProjectData {
-  id: string; // Unique slug for routing
+  id: string;
   title: string;
   date: string;
-  description: string;
+  description: React.ReactNode;
   techStack: string[];
   sections: ProjectSectionItem[];
   externalLink?: string;
@@ -152,8 +153,11 @@ export const allProjects: ProjectData[] = [
     id: "traffic-sign-detection",
     title: "Graph-Based Traffic Sign Detection & Classification",
     date: "Mar 2025 - May 2025 | DSA Group Project",
-    description:
-      "An intelligent, graph-based educational tool to detect and classify South African traffic signs, implemented entirely in pure Java.",
+    description: (
+      <p>
+        This project focused on the development of an intelligent, graph-based educational tool designed to detect and classify South African traffic signs, aiming to <span className="text-green-400">enhance road safety awareness</span>. The core innovation lies in the design and implementation of a custom Graph Neural Network (GNN) classification model and a k-Nearest Neighbors (k-NN) graph structure, built entirely in pure Java. The system's core logic utilizes sophisticated image processing techniques for feature extraction based on metrics like color, shape (triangle, circle, octagon), and edge density, allowing for robust classification without relying on external machine learning frameworks.
+      </p>
+    ),
     techStack: ["Java", "GNN", "k-NN", "Image Processing", "Algorithms"],
     sections: trafficSignProjectSections,
   },
@@ -161,8 +165,11 @@ export const allProjects: ProjectData[] = [
     id: "benchmark-trader",
     title: "Benchmark Trader",
     date: "Feb 2025 - Oct 2025 | Ranked #14 in UJ ACSSE Top 20 Projects",
-    description:
-      "A comprehensive full-stack trading platform (web + mobile) featuring smart matching algorithms and real-time analytics.",
+    description: (
+      <p>
+        Benchmark Trader is a comprehensive full-stack demo trading platform, designed and developed from concept to deployment. The platform utilizes a robust system architecture, including a backend built with Node.js and Prisma and a responsive frontend using React, TypeScript, and Tailwind CSS. A key feature is the smart matching algorithm that pairs users with brokers based on a dynamic <span className="text-green-400">risk-assessment questionnaire</span>.The system handles the complete trade lifecycle and features <span className="text-green-400">real-time financial analytics, secure direct messaging, and cross-platform accessibility</span> via a companion Flutter mobile application.
+      </p >
+    ),
     techStack: [
       "React",
       "TypeScript",
@@ -181,8 +188,11 @@ export const allProjects: ProjectData[] = [
     id: "e-thrifting",
     title: "E-Thrifting Website",
     date: "Jul 2024 - Oct 2024 | E-Commerce Group Project",
-    description:
-      "A full-stack e-commerce web application designed for buying and selling second-hand clothing.",
+    description: (
+      <p>
+        E-Thrifting is a full-stack e-commerce web application dedicated to <span className="text-green-400">buying and selling second-hand clothing</span>, built upon a resilient multi-tier Client/Server architecture. The core business logic and secure user authentication were implemented using Visual Basic .NET, backed by a SQL database with a meticulously normalized schema for managing user profiles, product listings, and transactions. The application features a dynamic <span className="text-green-400">product catalog</span> with advanced search capabilities, secure <span className="text-green-400">shopping cart</span> management, and a robust transaction processing system, developed using HTML, CSS, and JavaScript while adhering to Agile development principles.
+      </p>
+    ),
     techStack: [
       "Visual Basic .NET",
       "SQL",
