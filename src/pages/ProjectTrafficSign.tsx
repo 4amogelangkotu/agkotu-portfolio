@@ -1,6 +1,5 @@
 // src/pages/ProjectTrafficSign.tsx
 // import React from 'react';
-// Adjust the path to Description component based on your project structure
 import Description from '../components/Description';
 
 // NOTE: Ideally, move the project data to a central file (e.g., src/data/projects.ts)
