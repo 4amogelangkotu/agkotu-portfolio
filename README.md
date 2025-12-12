@@ -1,10 +1,10 @@
-# AGKotu Portfolio
+# Amogelang Gift Kotu's Portfolio
 
 This is a personal portfolio website built with React, TypeScript, and Vite. It showcases my projects and skills, with a focus on creating a unique and engaging user experience through the use of animations and interactive elements.
 
 ## Live Demo
 
-Check out the live website: **[https://agkotu-portfolio-2w4s.vercel.app/]([Live Demo Link])**
+- **Check out the live website:** [Live Demo Link](https://agkotu-portfolio-2w4s.vercel.app/)
 
 ![Portfolio Screenshot](src\assets\portfolio-screenshot.png)
 
@@ -117,5 +117,5 @@ Serves the production build locally.
 I'd love to hear from you!
 
 - **Email:** [amogelangkotu@icloud.com](mailto:amogelangkotu@icloud.com)
-- **LinkedIn:** [linkedin.com/in/amogelangkotu/](https://www.linkedin.com/in/amogelangkotu/)
+- **LinkedIn:** [in/amogelangkotu](https://www.linkedin.com/in/amogelangkotu/)
 - **Twitter:** [@giftamogelangg](https://twitter.com/giftamogelangg)
