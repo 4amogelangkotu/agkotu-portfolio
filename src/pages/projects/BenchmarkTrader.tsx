@@ -1,6 +1,6 @@
 // src/pages/ProjectBenchmarkTrader.tsx
 // import React from 'react';
-import Description from '../components/Description';
+import Description from '../../components/Description';
 
 // NOTE: Ideally, move the project data to a central file (e.g., src/data/projects.ts)
 const benchmarkTraderProject = [

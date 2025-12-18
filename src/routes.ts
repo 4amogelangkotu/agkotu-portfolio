@@ -4,9 +4,9 @@ import React from "react";
 
 // Import your components
 import App from "./App";
-import ProjectTrafficSign from "./pages/ProjectTrafficSign";
-import ProjectBenchmarkTrader from "./pages/ProjectBenchmarkTrader";
-import ProjectEThrifting from "./pages/ProjectEThrifting";
+import ProjectTrafficSign from "./pages/projects/TrafficSignDetector";
+import ProjectBenchmarkTrader from "./pages/projects/BenchmarkTrader";
+import ProjectEThrifting from "./pages/projects/EThrifting";
 
 export const router = createBrowserRouter([
   {
@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
     element: React.createElement(App),
   },
   {
-    path: "/project/traffic-sign-detection",
+    path: "/project/traffic-sign-detector",
     element: React.createElement(ProjectTrafficSign),
   },
   {
