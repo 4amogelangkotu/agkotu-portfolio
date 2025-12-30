@@ -5,6 +5,7 @@ import TerminalWindowBar from "../TerminalWindowBar";
 import { allProjects } from '../../data/projectsData';
 import { faArrowRight, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 // import { skillIcons, FontAwesomeIcon, faCode } from '../../components/skillIcons';
 
 export default function Projects() {
@@ -95,9 +96,35 @@ export default function Projects() {
                                     href={project.externalLink}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center bg-[#161921] border border-gray-700 text-gray-100 px-4 py-2 rounded-md text-sm transition-all duration-300 ease-in-out hover:border hover:border-green-400 hover:shadow-lg hover:shadow-green-500/25 hover:scale-105 hover:bg-green-900"                                >
+                                    className="inline-flex items-center
+                                    bg-[#161921] border border-gray-700
+                                    text-gray-100 px-4 py-2 rounded-md
+                                    text-sm transition-all duration-300
+                                    ease-in-out hover:border hover:border-green-400
+                                    hover:shadow-lg hover:shadow-green-500/25
+                                    hover:scale-105 hover:bg-green-900"
+                                >
                                     View External Link
                                     <FontAwesomeIcon icon={faExternalLinkAlt} className="w-4 h-4 ml-2" />
+                                </a>
+                            )}
+
+                            {/* 3. GitHub Button (Optional) - NEW ADDITION */}
+                            {project.githubLink && (
+                                <a
+                                    href={project.githubLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center
+                                    bg-[#161921] border border-gray-700
+                                    text-gray-100 px-4 py-2 rounded-md
+                                    text-sm transition-all duration-300
+                                    ease-in-out hover:border hover:border-green-400
+                                    hover:shadow-lg hover:shadow-green-500/25
+                                    hover:scale-105 hover:bg-green-900"
+                                >
+                                    View GitHub Repository
+                                    <FontAwesomeIcon icon={faGithub} className="w-4 h-4 ml-2" />
                                 </a>
                             )}
                         </div>

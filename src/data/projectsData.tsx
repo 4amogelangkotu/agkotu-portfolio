@@ -32,6 +32,7 @@ interface ProjectData {
   sections: ProjectSectionItem[];
   galleryImages?: GalleryImage[];
   externalLink?: string;
+  githubLink?: string;
 }
 
 // --- Individual Project Data Definitions ---
@@ -122,50 +123,36 @@ const benchmarkTraderProjectSections: ProjectSectionItem[] = [
 
 const eThriftingProjectSections: ProjectSectionItem[] = [
   {
-    title: "Project Overview",
+    title: "Project Scope & Architecture",
     items: [
-      "A full-stack e-commerce web application designed for buying and selling second-hand clothing",
-      "Built from the ground up using multi-tier client/server architecture",
-      "Focus on core e-commerce functionalities and secure, user-friendly experience",
+      "Developed a robust Multi-Tier E-Commerce Platform facilitating the buying and selling of second-hand clothing.",
+      "Architected a strict separation of concerns using a Client/Server model, ensuring scalability, security, and maintainability.",
+      "Delivered a seamless user experience by integrating a responsive frontend with a logic-heavy backend.",
     ],
   },
   {
-    title: "Core Functionality",
+    title: "Core Functionalities",
     items: [
-      "User registration and secure authentication system",
-      "Product catalog with advanced search and filter capabilities",
-      "Shopping cart management with persistent storage",
-      "Secure checkout process for transaction completion",
-      "Dynamic product browsing and management interface",
+      "Implemented a secure User Authentication System handling registration, login, and persistent session management.",
+      "Built a dynamic Product Catalog featuring category filtering, keyword search, and real-time availability updates.",
+      "Engineered a persistent Shopping Cart and Checkout System capable of processing complex transaction flows.",
+      "Created a vendor dashboard allowing users to manage their own product listings and view sales history.",
     ],
   },
   {
-    title: "Technical Architecture",
+    title: "Backend & Data Management",
     items: [
-      "Multi-tier Client/Server architecture for scalability and maintainability",
-      "Front-end: HTML, CSS, JavaScript for dynamic user interface",
-      "Back-end: Visual Basic .NET for business logic and authentication",
-      "Database: SQL with normalized schema design",
-      "Complex SQL queries for user data, product listings, and transactions",
+      "Backend logic developed in Visual Basic .NET, handling data validation, business rules, and server-side processing.",
+      "Designed a highly normalized SQL Database Schema to ensure data integrity across users, products, and orders.",
+      "Optimized database performance with complex SQL Queries for efficient data retrieval and reporting.",
     ],
   },
   {
-    title: "Key Features",
+    title: "Development Methodology",
     items: [
-      "User-centric design with intuitive UI/UX for easy navigation",
-      "Robust product management system with comprehensive listing capabilities",
-      "Secure user accounts with reliable authentication and session management",
-      "Efficient transaction processing system for sales handling",
-      "Advanced search and filtering for enhanced product discovery",
-    ],
-  },
-  {
-    title: "Development & Collaboration",
-    items: [
-      "Utilized Git for version control and team collaboration",
-      "Followed Agile principles with weekly sprints and progress tracking",
-      "Team-based development with coordinated feature implementation",
-      "Regular code reviews and integration testing",
+      "Executed the project using Agile Methodologies, utilizing sprints for iterative feature delivery and progress tracking.",
+      "Managed version control and team collaboration using Git, ensuring code stability across multiple contributors.",
+      "Conducted rigorous Integration Testing to ensure seamless communication between the frontend, backend, and database layers.",
     ],
   },
 ];
@@ -184,6 +171,7 @@ export const allProjects: ProjectData[] = [
     ),
     techStack: ["Java", "JavaFX", "Computer Vision", "Graph Theory", "Algorithms"],
     sections: trafficSignProjectSections,
+    githubLink: "https://github.com/4amogelangkotu/traffic-sign-detector",
     galleryImages: [
       {
         src: tsdMain,
