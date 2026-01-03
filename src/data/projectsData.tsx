@@ -86,37 +86,34 @@ const benchmarkTraderProjectSections: ProjectSectionItem[] = [
   {
     title: "Project Overview",
     items: [
-      "Designed & developed a comprehensive full-stack trading platform from concept to deployment",
-      "Guided demo trading platform facilitating user-broker interactions and trade lifecycle management",
-      "Ranked #14 in UJ ACSSE Top 20 Projects, demonstrating technical excellence and innovation",
+      "Built a comprehensive online trading simulation that takes users from absolute beginners to confident traders. The platform offers a realistic, risk-free environment where users can practice buying and selling assets without the fear of losing real money.",
+      "Designed a complete 'dual-role' ecosystem that connects standard Users with professional Brokers. This simulates real-world market dynamics, allowing users to propose trades and brokers to review, approve, or reject them based on current market conditions.",
+      "Recognized for technical excellence by ranking #14 out of the Top 20 final-year projects at the University of Johannesburg. This achievement highlights the system's stability, innovative features, and professional-grade user experience.",
     ],
   },
   {
-    title: "System Design & Architecture",
+    title: "How It Was Built",
     items: [
-      "Created UML use case and sequence diagrams to model complete trade lifecycle and user-broker interactions",
-      "Engineered normalized database schema for user profiles, risk assessments, and trade histories",
-      "Built backend with Node.js & Prisma, and responsive frontend with React, TypeScript & Tailwind CSS",
-      "Extended platform accessibility with companion Flutter mobile app for on-the-go access",
+      "Started with extensive planning and blueprints (diagrams) to map out exactly how users would interact with the app. This ensured every feature—from logging in to withdrawing profits—felt intuitive and logical before a single line of code was written.",
+      "Developed a modern, responsive website using popular technologies like React and Tailwind CSS. This ensures the platform looks professional and works smoothly on any device, whether it's a large desktop monitor or a small laptop screen.",
+      "Created a fully functional companion mobile app using Flutter. This allows users to track their portfolios, check market prices, and chat with brokers while on the go, ensuring they never miss a trading opportunity.",
+      "Connected everything to a powerful, secure database (backend) that acts as the 'brain' of the operation. It instantly updates user balances, trade history, and messages across both the website and the mobile app simultaneously.",
     ],
   },
   {
-    title: "Core Functionality",
+    title: "Smart Features",
     items: [
-      "Smart matching algorithm pairing users with brokers based on dynamic risk-assessment questionnaire",
-      "Real-time broker dashboard with integrated financial news and analytics",
-      "Secure direct messaging system for client-broker communication",
-      "Automated trade process from proposal to profit withdrawal",
+      "Designed a unique 'Smart Match' algorithm that acts like a matchmaking service for finance. It asks users a series of simple questions to understand their risk tolerance and financial goals, then automatically pairs them with the broker best suited to their personality.",
+      "Automated the entire lifecycle of a trade to reduce manual work. When a user makes a profit, the system automatically handles the calculation and updates their 'wallet' balance, simulating a real-world withdrawal process without any friction.",
+      "Integrated a secure, WhatsApp-style messaging tool directly into the dashboard. This allows clients and brokers to discuss strategies, negotiate deals, and build trust without ever having to leave the platform.",
     ],
   },
   {
-    title: "Key Features",
+    title: "Key Highlights",
     items: [
-      "Dynamic risk-assessment system for personalized broker matching",
-      "Real-time financial analytics and market data integration",
-      "Secure communication channels between clients and brokers",
-      "Cross-platform accessibility via web and mobile applications",
-      "Automated profit withdrawal and trade settlement processes",
+      "Features a live 'Market Dashboard' that displays real-time financial news and interactive price charts. This helps users learn how to analyze market trends and make informed decisions rather than just guessing.",
+      "Ensures perfect synchronization between devices. If a user starts a trade on their computer, they can immediately see it and continue managing it on their phone without any delay or data loss.",
+      "Prioritized a clean, user-friendly design (UI/UX) that hides the complex math and logic behind simple buttons. This makes the intimidating world of stock trading feel accessible and easy to navigate for everyone.",
     ],
   },
 ];

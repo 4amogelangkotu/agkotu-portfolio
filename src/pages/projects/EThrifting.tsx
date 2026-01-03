@@ -114,7 +114,12 @@ export default function ProjectEThrifting() {
                         {project.techStack.map((tech) => (
                             <span
                                 key={tech}
-                                className="bg-[#161921] border border-gray-700 text-blue-100 px-3 py-1 rounded-lg text-sm"
+                                className="bg-[#0e2016] border border-green-800 
+                                    text-green-100 px-3 py-1 rounded-md text-sm flex 
+                                    items-center gap-2 transition-all duration-300 
+                                    ease-in-out hover:border-green-400 hover:shadow-lg 
+                                    hover:shadow-green-500/25 hover:scale-105 
+                                    hover:bg-[#0f2a1d] cursor-pointer"
                             >
                                 {tech}
                             </span>
