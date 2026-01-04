@@ -2,6 +2,9 @@
 import { useState } from 'react';
 import Description from '../../components/Description';
 import { allProjects } from '../../data/projectsData';
+import ShinyText from '../../components/ShinyText';
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Placeholder for future logo
 // import btLogo from '../../assets/bt/bt-logo.svg';
 
@@ -43,9 +46,12 @@ export default function ProjectBenchmarkTrader() {
                         className="w-12 h-12 md:w-16 md:h-16" 
                     /> 
                     */}
-                    <h1 className="text-3xl md:text-4xl text-white font-bold text-center">
-                        {project.title}
-                    </h1>
+                    <ShinyText
+                        text={project.title}
+                        disabled={false}
+                        speed={3}
+                        className="text-3xl font-bold text-center md:text-4xl"
+                    />
                 </div>
 
                 {/* --- DATE / SUBTITLE --- */}
@@ -141,6 +147,7 @@ export default function ProjectBenchmarkTrader() {
                                     hover:scale-105 hover:bg-green-900"
                             >
                                 View Marketing Website
+                                <FontAwesomeIcon icon={faExternalLinkAlt} className="w-4 h-4 ml-2" />
                             </a>
                         </div>
                     )}
@@ -148,7 +155,7 @@ export default function ProjectBenchmarkTrader() {
 
                 {/* --- FOOTER --- */}
                 <div className="text-center mt-12">
-                    <a href="/" className="text-blue-400 hover:text-blue-300 underline transition-colors duration-300">
+                    <a href="/" className="text-green-400 hover:text-green-300 underline transition-colors duration-300">
                         &larr; Back to Portfolio
                     </a>
                 </div>

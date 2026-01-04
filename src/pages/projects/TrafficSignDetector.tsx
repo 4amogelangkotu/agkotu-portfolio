@@ -2,6 +2,9 @@
 import { useState } from 'react';
 import Description from '../../components/Description';
 import { allProjects } from '../../data/projectsData';
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ShinyText from '../../components/ShinyText';
 import tsdLogo from '../../assets/tsd/tsd-logo.svg';
 
 export default function ProjectTrafficSign() {
@@ -38,9 +41,12 @@ export default function ProjectTrafficSign() {
                         alt="Traffic Sign Detector Logo"
                         className="w-12 h-12 md:w-16 md:h-16" /* Adjust size as needed */
                     />
-                    <h1 className="text-3xl md:text-4xl text-white font-bold text-center">
-                        {project.title}
-                    </h1>
+                    <ShinyText
+                        text={project.title}
+                        disabled={false}
+                        speed={3}
+                        className="text-3xl font-bold text-center md:text-4xl"
+                    />
                 </div>
 
                 {/* 3. Dynamic Date/Subtitle */}
@@ -63,7 +69,8 @@ export default function ProjectTrafficSign() {
                     <div className="mb-16">
                         <h3 className="text-2xl text-green-300 mb-6 text-center">Project Gallery</h3>
 
-                        <div className="relative w-full bg-gray-900 rounded-xl overflow-hidden border border-gray-700 shadow-xl">
+                        {/* UPDATED: Added max-w-4xl and mx-auto to center and shrink the gallery container */}
+                        <div className="relative w-full max-w-4xl mx-auto bg-gray-900 rounded-xl overflow-hidden border border-gray-700 shadow-xl">
                             <div className="relative aspect-video w-full flex items-center justify-center bg-black">
                                 <img
                                     src={galleryImages[currentIdx].src}
@@ -118,6 +125,26 @@ export default function ProjectTrafficSign() {
                             </span>
                         ))}
                     </div>
+
+                    {project.githubLink && (
+                        <div className="mt-8">
+                            <a
+                                href={project.githubLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center
+                                    bg-[#161921] border border-gray-700
+                                    text-gray-100 px-4 py-2 rounded-md
+                                    text-sm transition-all duration-300
+                                    ease-in-out hover:border hover:border-green-400
+                                    hover:shadow-lg hover:shadow-green-500/25
+                                    hover:scale-105 hover:bg-green-900"
+                            >
+                                View GitHub Repository
+                                <FontAwesomeIcon icon={faGithub} className="w-4 h-4 ml-2" />
+                            </a>
+                        </div>
+                    )}
                 </div>
 
                 <div className="text-center mt-12">

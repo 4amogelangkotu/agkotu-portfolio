@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Description from '../../components/Description';
 import { allProjects } from '../../data/projectsData';
+import ShinyText from '../../components/ShinyText';
 // Placeholder for future logo import
 // import ethLogo from '../../assets/eth/eth-logo.svg';
 
@@ -44,9 +45,13 @@ export default function ProjectEThrifting() {
                         className="w-12 h-12 md:w-16 md:h-16"
                     />
                     */}
-                    <h1 className="text-3xl md:text-4xl text-white font-bold text-center">
-                        {project.title}
-                    </h1>
+
+                    <ShinyText
+                        text={project.title}
+                        disabled={false}
+                        speed={3}
+                        className="text-3xl font-bold text-center md:text-4xl"
+                    />
                 </div>
 
                 {/* --- DATE / SUBTITLE --- */}
