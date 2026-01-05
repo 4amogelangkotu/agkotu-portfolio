@@ -243,7 +243,6 @@ export const allProjects: ProjectData[] = [
       "CSS",
       "JavaScript",
       "Git",
-      "Agile",
     ],
     sections: eThriftingProjectSections,
   },
