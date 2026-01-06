@@ -4,9 +4,7 @@ This is a personal portfolio website built with React, TypeScript, and Vite. It 
 
 ## Live Demo
 
-- **Check out the live website:** [Live Demo Link](https://agkotu-portfolio-2w4s.vercel.app/)
-
-![Portfolio Screenshot](src\assets\portfolio-screenshot.png)
+[![Portfolio Screenshot](src/assets/sc/portfolio-screenshot.png)](https://agkotu-portfolio-2w4s.vercel.app/)
 
 ## Features
 
