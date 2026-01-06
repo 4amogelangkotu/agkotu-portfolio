@@ -222,7 +222,7 @@ export const allProjects: ProjectData[] = [
       "Supabase",
       "Flutter",
       "Git",
-      // "UML",
+      "UML",
     ],
     sections: benchmarkTraderProjectSections,
     externalLink: "https://adam.uj.ac.za/projectsday/teamweb/Team32/index.html",
