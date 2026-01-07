@@ -6,7 +6,7 @@ const LetterGlitch = ({
   centerVignette = false,
   outerVignette = true,
   smooth = true,
-  characters = 'AMOGELANG!GIFT@KOTU#RUBENSWORL$TCO&*()-_+=/[]{};:<>.,0123456789'
+  characters = 'AMOGELANG!GIFT@KOTU#RUBENSWORL$&*()-_+=/[]{};:<>.,0123456789'
 }: {
   glitchColors: string[];
   glitchSpeed: number;
