@@ -2,7 +2,8 @@
 import { useState } from 'react';
 import Description from '../../components/Description';
 import { allProjects } from '../../data/projectsData';
-import ShinyText from '../../components/ShinyText';
+// import ShinyText from '../../components/ShinyText';
+import TextType from '../../components/TextType';
 // Placeholder for future logo import
 // import ethLogo from '../../assets/eth/eth-logo.svg';
 
@@ -46,10 +47,19 @@ export default function ProjectEThrifting() {
                     />
                     */}
 
-                    <ShinyText
+                    {/* <ShinyText
                         text={project.title}
                         disabled={false}
                         speed={3}
+                        className="text-3xl font-bold text-center md:text-4xl"
+                    /> */}
+
+                    <TextType
+                        text={[project.title, "www.ethrift.com"]}
+                        typingSpeed={75}
+                        pauseDuration={1500}
+                        showCursor={true}
+                        cursorCharacter="|"
                         className="text-3xl font-bold text-center md:text-4xl"
                     />
                 </div>

@@ -52,6 +52,8 @@ export default function ProjectBenchmarkTrader() {
                         speed={3}
                         className="text-3xl font-bold text-center md:text-4xl"
                     />
+
+
                 </div>
 
                 {/* --- DATE / SUBTITLE --- */}
