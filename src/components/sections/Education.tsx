@@ -30,7 +30,7 @@ export default function Education() {
                         <li>Object-Oriented Programming <span className="text-blue-400">Java</span></li>
                         <li>Data Communications <span className="text-blue-400">Java</span></li>
                         <li>Database Design <span className="text-blue-400">SQL</span></li>
-                        <li>Internet Electronic Commerce <span className="text-blue-400">HTML, CSS, JavaScript, C#, SQL</span></li>
+                        <li>Internet Electronic Commerce <span className="text-blue-400">HTML, CSS, JavaScript, ASP.Net, C#, SQL</span></li>
                         <li>Advanced Data Structures and Algorithms <span className="text-blue-400">Java</span></li>
                         <li>Operating System Concepts <span className="text-blue-400">80x86 Assembly</span></li>
                         <li>Introduction to Software Engineering <span className="text-blue-400">Software Design</span></li>
