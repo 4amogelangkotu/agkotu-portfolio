@@ -2,7 +2,7 @@
 
 import ShinyText from "../ShinyText";
 export default function Education() {
-    const technologies = ['VB', 'C++', 'Java', 'SQL', 'HTML', 'CSS', 'JavaScript', 'C#', '80x86 Assembly'];
+    const technologies = ['VB', 'C++', 'Java', 'SQL', 'HTML', 'CSS', 'JavaScript', 'ASP.Net', 'C#', '80x86 Assembly'];
 
     return (
         <section className="py-12 px-6 bg-linear-to-b from-black to-[#161921]">
