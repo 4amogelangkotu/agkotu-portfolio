@@ -20,9 +20,6 @@ This is a personal portfolio website built with React, TypeScript, and Vite. It 
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [GSAP](https://greensock.com/gsap/)
-- [Matter.js](https://brm.io/matter-js/)
-- [Lenis](https://lenis.studio/) for smooth scrolling
 
 ## Installation
 
