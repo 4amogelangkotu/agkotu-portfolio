@@ -5,8 +5,7 @@ import { allProjects } from '../../data/projectsData';
 import ShinyText from '../../components/ShinyText';
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// Placeholder for future logo
-// import btLogo from '../../assets/bt/bt-logo.svg';
+import btLogo from '../../assets/bt/bt-logo.svg';
 
 export default function ProjectBenchmarkTrader() {
 
@@ -38,14 +37,17 @@ export default function ProjectBenchmarkTrader() {
         <div className="min-h-screen text-white font-mono w-full p-10 bg-black">
             <div className="max-w-6xl mx-auto py-10">
 
+                <div className="flex items-center justify-center gap-4 mb-2">
+                    <img
+                        src={btLogo}
+                        alt="Benchmark Trader Logo"
+                        className="w-12 h-12 md:w-16 md:h-16"
+                    />
+                </div>
+
                 {/* --- HEADER --- */}
                 <div className="flex items-center justify-center gap-4 mb-2">
-                    {/* <img 
-                        src={btLogo} 
-                        alt="Benchmark Trader Logo" 
-                        className="w-12 h-12 md:w-16 md:h-16" 
-                    /> 
-                    */}
+
                     <ShinyText
                         text={project.title}
                         disabled={false}

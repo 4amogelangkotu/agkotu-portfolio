@@ -4,8 +4,7 @@ import Description from '../../components/Description';
 import { allProjects } from '../../data/projectsData';
 // import ShinyText from '../../components/ShinyText';
 import TextType from '../../components/TextType';
-// Placeholder for future logo import
-// import ethLogo from '../../assets/eth/eth-logo.svg';
+import etLogo from '../../assets/et/et-logo.svg';
 
 export default function ProjectEThrifting() {
 
@@ -36,16 +35,18 @@ export default function ProjectEThrifting() {
     return (
         <div className="min-h-screen text-white font-mono w-full p-10 bg-black">
             <div className="max-w-6xl mx-auto py-10">
-
-                {/* --- HEADER --- */}
                 <div className="flex items-center justify-center gap-4 mb-2">
-                    {/* Uncomment when you have an imported logo
                     <img
-                        src={ethLogo}
+                        src={etLogo}
                         alt="E-Thrifting Logo"
                         className="w-12 h-12 md:w-16 md:h-16"
                     />
-                    */}
+                </div>
+
+                {/* --- HEADER --- */}
+                <div className="flex items-center justify-center gap-4 mb-2">
+
+
 
                     {/* <ShinyText
                         text={project.title}
@@ -55,7 +56,7 @@ export default function ProjectEThrifting() {
                     /> */}
 
                     <TextType
-                        text={[project.title, "www.ethrift.com"]}
+                        text={[project.title, "www.e-thrifting.co.za"]}
                         typingSpeed={75}
                         pauseDuration={1500}
                         showCursor={true}
