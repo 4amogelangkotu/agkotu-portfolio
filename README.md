@@ -1,4 +1,4 @@
-# Amogelang Gift Kotu's Portfolio
+# Amogelang Kotu's Portfolio
 
 This is a personal portfolio website built with React, TypeScript, and Vite. It showcases my projects and skills, with a focus on creating a unique and engaging user experience through the use of animations and interactive elements.
 
