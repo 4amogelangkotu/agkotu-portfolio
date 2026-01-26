@@ -45,9 +45,6 @@ export default function ProjectEThrifting() {
 
                 {/* --- HEADER --- */}
                 <div className="flex items-center justify-center gap-4 mb-2">
-
-
-
                     {/* <ShinyText
                         text={project.title}
                         disabled={false}
