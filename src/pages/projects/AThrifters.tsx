@@ -2,8 +2,8 @@
 import { useState } from 'react';
 import Description from '../../components/Description';
 import { allProjects } from '../../data/projectsData';
-// import ShinyText from '../../components/ShinyText';
-import TextType from '../../components/TextType';
+import ShinyText from '../../components/ShinyText';
+// import TextType from '../../components/TextType';
 import etLogo from '../../assets/at/at-logo.svg';
 
 export default function ProjectAThrifters() {
@@ -45,14 +45,14 @@ export default function ProjectAThrifters() {
 
                 {/* --- HEADER --- */}
                 <div className="flex items-center justify-center gap-4 mb-2">
-                    {/* <ShinyText
+                    <ShinyText
                         text={project.title}
                         disabled={false}
                         speed={3}
                         className="text-3xl font-bold text-center md:text-4xl"
-                    /> */}
+                    />
 
-                    <TextType
+                    {/* <TextType
                         text={[project.title, "www.a-thrifters.co.za"]}
                         typingSpeed={75}
                         pauseDuration={1500}
@@ -60,6 +60,7 @@ export default function ProjectAThrifters() {
                         cursorCharacter="|"
                         className="text-3xl font-bold text-center md:text-4xl"
                     />
+                     */}
                 </div>
 
                 {/* --- DATE / SUBTITLE --- */}
