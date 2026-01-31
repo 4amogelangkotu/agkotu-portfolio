@@ -118,38 +118,38 @@ const benchmarkTraderProjectSections: ProjectSectionItem[] = [
   },
 ];
 
-const eThriftingProjectSections: ProjectSectionItem[] = [
+const aThriftersProjectSections: ProjectSectionItem[] = [
   {
     title: "Project Scope & Architecture",
     items: [
-      "Developed a robust Multi-Tier E-Commerce Platform facilitating the buying and selling of second-hand clothing.",
-      "Architected a strict separation of concerns using a Client/Server model, ensuring scalability, security, and maintainability.",
-      "Delivered a seamless user experience by integrating a responsive frontend with a logic-heavy backend.",
+      "Designed a complete e-commerce solution simulating a real-world circular economy marketplace for pre-loved clothing.",
+      "Architected a scalable Service-Oriented Architecture (SOA) that strictly separates the frontend (ASP.NET) from business logic (WCF Services).",
+      "Demonstrated enterprise-level development skills by moving beyond simple CRUD to implement complex transactional workflows.",
     ],
   },
   {
     title: "Core Functionalities",
     items: [
-      "Implemented a secure User Authentication System handling registration, login, and persistent session management.",
-      "Built a dynamic Product Catalog featuring category filtering, keyword search, and real-time availability updates.",
-      "Engineered a persistent Shopping Cart and Checkout System capable of processing complex transaction flows.",
-      "Created a vendor dashboard allowing users to manage their own product listings and view sales history.",
+      "Built a secure Role-Based Authentication system that provides distinct dashboards and capabilities for Customers versus Managers.",
+      "Engineered a smart Shopping Cart using Session state to persist user selections across the application.",
+      "Implemented a 'Manager Dashboard' that allows administrators to upload products, track inventory in real-time, and manage customer orders.",
+      "Created a dynamic catalog with filtering and search capabilities, backed by efficient SQL queries.",
     ],
   },
   {
-    title: "Backend & Data Management",
+    title: "Backend & Data Integrity",
     items: [
-      "Backend logic developed in Visual Basic .NET, handling data validation, business rules, and server-side processing.",
-      "Designed a highly normalized SQL Database Schema to ensure data integrity across users, products, and orders.",
-      "Optimized database performance with complex SQL Queries for efficient data retrieval and reporting.",
+      "Developed a decoupled WCF Service layer in C# to handle all data access, ensuring the frontend never touches the database directly.",
+      "Utilized LINQ to SQL for type-safe database interactions, preventing common errors and security vulnerabilities.",
+      "Designed a normalized Microsoft SQL Server database schema to maintain data integrity across users, products, and invoices.",
     ],
   },
   {
-    title: "Development Methodology",
+    title: "Technical Highlights",
     items: [
-      "Executed the project using Agile Methodologies, utilizing sprints for iterative feature delivery and progress tracking.",
-      "Managed version control and team collaboration using Git, ensuring code stability across multiple contributors.",
-      "Conducted rigorous Integration Testing to ensure seamless communication between the frontend, backend, and database layers.",
+      "Implemented a transactional checkout engine that calculates VAT, validates stock levels, and generates invoices instantly.",
+      "Used Bootstrap to create a responsive, modern UI that works seamlessly across desktop and mobile devices.",
+      "Integrated comprehensive error handling and input validation to ensure application stability and security.",
     ],
   },
 ];
@@ -228,22 +228,23 @@ export const allProjects: ProjectData[] = [
     externalLink: "https://adam.uj.ac.za/projectsday/teamweb/Team32/index.html",
   },
   {
-    id: "e-thrifting",
-    title: "E-Thrifting Website",
-    date: "Jul 2024 - Oct 2024 | E-Commerce Group Project",
+    id: "a-thrifters",
+    title: "A-Thrifters",
+    date: "Dec 2025 -Jan 2026",
     description: (
       <p>
-        E-Thrifting is a full-stack e-commerce web application dedicated to <span className="text-green-400">buying and selling second-hand clothing</span>, built upon a resilient multi-tier Client/Server architecture. The core business logic and secure user authentication were implemented using Visual Basic .NET, backed by a SQL database with a meticulously normalized schema for managing user profiles, product listings, and transactions. The application features a dynamic <span className="text-green-400">product catalog</span> with advanced search capabilities, secure <span className="text-green-400">shopping cart</span> management, and a robust transaction processing system, developed using HTML, CSS, and JavaScript while adhering to Agile development principles.
+        A-Thrifters is a robust, full-stack e-commerce platform built to simulate a high-traffic retail environment. Architected using a <span className="text-green-400">Service-Oriented Architecture (SOA)</span>, it separates the ASP.NET frontend from the business logic layer using WCF Services. The system features a complex <span className="text-green-400">transactional checkout engine</span>, real-time stock tracking, and a secure Manager Dashboard for inventory control. It demonstrates the ability to build scalable, multi-tier enterprise applications using the .NET ecosystem.
       </p>
     ),
     techStack: [
-      "Visual Basic .NET",
-      "SQL",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Git",
+      "C#",
+      "ASP.NET Web Forms",
+      "WCF Services",
+      "SQL Server",
+      "LINQ",
+      "Bootstrap",
     ],
-    sections: eThriftingProjectSections,
+    sections: aThriftersProjectSections,
+    githubLink: "https://github.com/4amogelangkotu/A-Thrifters",
   },
 ];

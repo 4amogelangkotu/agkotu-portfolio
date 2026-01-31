@@ -7,7 +7,7 @@ import RootLayout from "./components/RootLayout"; // Import the new layout
 import App from "./App";
 import ProjectTrafficSign from "./pages/projects/TrafficSignDetector";
 import ProjectBenchmarkTrader from "./pages/projects/BenchmarkTrader";
-import ProjectEThrifting from "./pages/projects/EThrifting";
+import ProjectEThrifting from "./pages/projects/AThrifters";
 
 export const router = createBrowserRouter([
   {
@@ -27,7 +27,7 @@ export const router = createBrowserRouter([
         element: React.createElement(ProjectBenchmarkTrader),
       },
       {
-        path: "project/e-thrifting",
+        path: "project/a-thrifters",
         element: React.createElement(ProjectEThrifting),
       },
     ],

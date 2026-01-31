@@ -4,12 +4,12 @@ import Description from '../../components/Description';
 import { allProjects } from '../../data/projectsData';
 // import ShinyText from '../../components/ShinyText';
 import TextType from '../../components/TextType';
-import etLogo from '../../assets/et/et-logo.svg';
+import etLogo from '../../assets/at/at-logo.svg';
 
-export default function ProjectEThrifting() {
+export default function ProjectAThrifters() {
 
     // 1. Find the specific project data
-    const project = allProjects.find((p) => p.id === "e-thrifting");
+    const project = allProjects.find((p) => p.id === "a-thrifters");
 
     // 2. Setup Gallery Logic (Matches the structure provided)
     const galleryImages = project?.galleryImages || [];
@@ -38,7 +38,7 @@ export default function ProjectEThrifting() {
                 <div className="flex items-center justify-center gap-4 mb-2">
                     <img
                         src={etLogo}
-                        alt="E-Thrifting Logo"
+                        alt="A-Thrifters Logo"
                         className="w-12 h-12 md:w-16 md:h-16"
                     />
                 </div>
@@ -53,7 +53,7 @@ export default function ProjectEThrifting() {
                     /> */}
 
                     <TextType
-                        text={[project.title, "www.e-thrifting.co.za"]}
+                        text={[project.title, "www.a-thrifters.co.za"]}
                         typingSpeed={75}
                         pauseDuration={1500}
                         showCursor={true}
