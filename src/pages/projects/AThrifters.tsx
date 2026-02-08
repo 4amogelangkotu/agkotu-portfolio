@@ -123,7 +123,7 @@ export default function ProjectAThrifters() {
 
                 {/* --- TECH STACK --- */}
                 <div className="mt-12 text-center">
-                    <h2 className="text-2xl text-green-300 mb-4">Core Technologies</h2>
+                    <h2 className="text-2xl text-green-500 mb-4">Core Technologies</h2>
                     <div className="flex flex-wrap justify-center gap-2">
                         {project.techStack.map((tech) => (
                             <span
@@ -143,7 +143,7 @@ export default function ProjectAThrifters() {
 
                 {/* --- FOOTER --- */}
                 <div className="text-center mt-12">
-                    <a href="/" className="text-blue-400 hover:text-blue-300 underline transition-colors duration-300">
+                    <a href="/" className="text-blue-500 hover:text-blue-300 underline transition-colors duration-300">
                         &larr; Back to Portfolio
                     </a>
                 </div>

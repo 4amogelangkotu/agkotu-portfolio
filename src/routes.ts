@@ -8,6 +8,7 @@ import App from "./App";
 import ProjectTrafficSign from "./pages/projects/TrafficSignDetector";
 import ProjectBenchmarkTrader from "./pages/projects/BenchmarkTrader";
 import ProjectEThrifting from "./pages/projects/AThrifters";
+import EducationPage from "./pages/EducationPage";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ export const router = createBrowserRouter([
       {
         path: "project/a-thrifters",
         element: React.createElement(ProjectEThrifting),
+      },
+      {
+        path: "/education",
+        element: React.createElement(EducationPage),
       },
     ],
   },
