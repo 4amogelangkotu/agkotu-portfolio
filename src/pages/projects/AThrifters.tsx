@@ -1,17 +1,16 @@
-// src/pages/ProjectEThrifting.tsx
+// src/pages/AThrifters.tsx
 import { useState } from 'react';
 import Description from '../../components/Description';
 import { allProjects } from '../../data/projectsData';
 import ShinyText from '../../components/ShinyText';
-// import TextType from '../../components/TextType';
 import etLogo from '../../assets/at/at-logo.svg';
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function ProjectAThrifters() {
 
-    // 1. Find the specific project data
     const project = allProjects.find((p) => p.id === "a-thrifters");
 
-    // 2. Setup Gallery Logic (Matches the structure provided)
     const galleryImages = project?.galleryImages || [];
     const [currentIdx, setCurrentIdx] = useState(0);
 
@@ -27,7 +26,6 @@ export default function ProjectAThrifters() {
         }
     };
 
-    // Safety check
     if (!project) {
         return <div className="text-white text-center p-20">Project data not found.</div>;
     }
@@ -35,15 +33,32 @@ export default function ProjectAThrifters() {
     return (
         <div className="min-h-screen text-white font-mono w-full p-10 bg-black">
             <div className="max-w-6xl mx-auto py-10">
-                <div className="flex items-center justify-center gap-4 mb-2">
+
+                {/* --- HEADER ROW (Back Button + Logo) --- */}
+                {/* 'relative' allows the back button to be absolute positioned within this row */}
+                <div className="relative flex items-center justify-center mb-6">
+
+                    {/* Back Button: Absolute positioned to the left, vertically centered */}
+                    <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
+                        <a
+                            href="/"
+                            className="text-white text-sm md:text-base flex items-center gap-2"
+                        >
+                            <span>&larr;</span>
+                            <span className="hidden md:inline">Back</span>
+                            <span className="md:hidden">Back</span>
+                        </a>
+                    </div>
+
+                    {/* Logo: Naturally centered by the flex container */}
                     <img
                         src={etLogo}
                         alt="A-Thrifters Logo"
-                        className="w-12 h-12 md:w-16 md:h-16"
+                        className="w-12 h-12 md:w-16 md:h-16 relative z-0"
                     />
                 </div>
 
-                {/* --- HEADER --- */}
+                {/* --- TITLE --- */}
                 <div className="flex items-center justify-center gap-4 mb-2">
                     <ShinyText
                         text={project.title}
@@ -51,38 +66,100 @@ export default function ProjectAThrifters() {
                         speed={3}
                         className="text-3xl font-bold text-center md:text-4xl"
                     />
-
-                    {/* <TextType
-                        text={[project.title, "www.a-thrifters.co.za"]}
-                        typingSpeed={75}
-                        pauseDuration={1500}
-                        showCursor={true}
-                        cursorCharacter="|"
-                        className="text-3xl font-bold text-center md:text-4xl"
-                    />
-                     */}
                 </div>
 
-                {/* --- DATE / SUBTITLE --- */}
-                <p className="text-gray-400 text-center mb-10">
+                {/* --- DATE --- */}
+                <p className="text-gray-400 text-center mb-12">
                     {project.date}
                 </p>
 
-                {/* --- DYNAMIC SECTIONS --- */}
-                <div className="grid gap-6 mb-12">
-                    {project.sections.map((section, index) => (
-                        <Description
-                            key={index}
-                            title={section.title}
-                            items={section.items}
-                        />
-                    ))}
+                {/* --- GRID LAYOUT --- */}
+                <div className="flex flex-col gap-6 mb-12">
+
+                    {/* Row 1: First two sections side-by-side */}
+                    {project.sections.length >= 2 && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <Description
+                                title={project.sections[0].title}
+                                items={project.sections[0].items}
+                            />
+                            <Description
+                                title={project.sections[1].title}
+                                items={project.sections[1].items}
+                            />
+                        </div>
+                    )}
+
+                    {/* Row 2: Third section full width */}
+                    {project.sections.length >= 3 && (
+                        <div className="w-full">
+                            <Description
+                                title={project.sections[2].title}
+                                items={project.sections[2].items}
+                            />
+                        </div>
+                    )}
+
+                    {/* Row 3: Fourth section (left) and Tech Stack (right) */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                        <div className="lg:col-span-1">
+                            {project.sections.length >= 4 && (
+                                <Description
+                                    title={project.sections[3].title}
+                                    items={project.sections[3].items}
+                                />
+                            )}
+                        </div>
+
+                        <div className="lg:col-span-1">
+                            <h2 className="text-lg text-blue-500 mb-4 font-semibold text-center">
+                                Tech Stack
+                            </h2>
+
+                            <div className="flex flex-wrap gap-2 mb-6 justify-center">
+                                {project.techStack.map((tech) => (
+                                    <span
+                                        key={tech}
+                                        className="bg-[#0e1620] border border-blue-800 
+                                    text-blue-100 px-3 py-1 rounded-md text-xs flex 
+                                    items-center gap-2 transition-all duration-300 
+                                    ease-in-out hover:border-blue-500 hover:shadow-lg 
+                                    hover:shadow-blue-500/25 hover:scale-105 
+                                    hover:bg-[#0e1620] cursor-pointer"
+                                    >
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+
+                            {project.githubLink && (
+                                <div className="mt-auto">
+                                    <a
+                                        href={project.githubLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center
+                                    bg-[#161921] border border-gray-700
+                                    text-gray-100 px-4 py-2 rounded-md
+                                    text-sm transition-all duration-300
+                                    ease-in-out hover:border hover:border-blue-500
+                                    hover:shadow-lg hover:shadow-blue-500/25
+                                    hover:scale-105 hover:bg-blue-900"
+                                    >
+                                        View GitHub Repository
+                                        <FontAwesomeIcon icon={faGithub} className="w-4 h-4 ml-2 group-hover:text-blue-400" />
+                                    </a>
+                                </div>
+                            )}
+                        </div>
+                    </div>
                 </div>
 
-                {/* --- GALLERY SECTION --- */}
+                {/* --- GALLERY --- */}
                 {galleryImages.length > 0 && (
                     <div className="mb-16">
-                        <h3 className="text-2xl text-green-300 mb-6 text-center">Project Gallery</h3>
+                        <h3 className="text-2xl text-blue-300 mb-6 text-center">Project Gallery</h3>
 
                         <div className="relative w-full bg-gray-900 rounded-xl overflow-hidden border border-gray-700 shadow-xl">
                             <div className="relative aspect-video w-full flex items-center justify-center bg-black">
@@ -93,22 +170,22 @@ export default function ProjectAThrifters() {
                                 />
                             </div>
 
-                            {/* Navigation Buttons (Overlay) */}
+                            {/* Left Button */}
                             <button
                                 onClick={prevImage}
                                 className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-green-500/80 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm border border-gray-600 hover:border-green-400 z-10"
                             >
-                                &#10094; {/* Left Arrow Entity */}
+                                &#10094;
                             </button>
 
+                            {/* Right Button */}
                             <button
                                 onClick={nextImage}
                                 className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-green-500/80 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm border border-gray-600 hover:border-green-400 z-10"
                             >
-                                &#10095; {/* Right Arrow Entity */}
+                                &#10095;
                             </button>
 
-                            {/* Caption Bar */}
                             <div className="bg-black p-4 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-2">
                                 <p className="text-gray-400 text-sm italic text-center md:text-left">
                                     {galleryImages[currentIdx].caption}
@@ -120,33 +197,6 @@ export default function ProjectAThrifters() {
                         </div>
                     </div>
                 )}
-
-                {/* --- TECH STACK --- */}
-                <div className="mt-12 text-center">
-                    <h2 className="text-2xl text-green-500 mb-4">Core Technologies</h2>
-                    <div className="flex flex-wrap justify-center gap-2">
-                        {project.techStack.map((tech) => (
-                            <span
-                                key={tech}
-                                className="bg-[#0e2016] border border-green-800 
-                                    text-green-100 px-3 py-1 rounded-md text-sm flex 
-                                    items-center gap-2 transition-all duration-300 
-                                    ease-in-out hover:border-green-400 hover:shadow-lg 
-                                    hover:shadow-green-500/25 hover:scale-105 
-                                    hover:bg-[#0f2a1d] cursor-pointer"
-                            >
-                                {tech}
-                            </span>
-                        ))}
-                    </div>
-                </div>
-
-                {/* --- FOOTER --- */}
-                <div className="text-center mt-12">
-                    <a href="/" className="text-blue-500 hover:text-blue-300 underline transition-colors duration-300">
-                        &larr; Back to Portfolio
-                    </a>
-                </div>
             </div>
         </div>
     );
