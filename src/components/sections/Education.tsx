@@ -37,7 +37,7 @@ export default function Education() {
                             <TimelineStepsHeader>
                                 <TimelineStepsIcon className="overflow-hidden p-0">
                                     <Avatar className="size-full">
-                                        <AvatarImage src="src/assets/uj-logo.png" alt="@shadcn" />
+                                        <AvatarImage src="public/uj-logo.png" alt="@shadcn" />
                                         <AvatarFallback>UJ</AvatarFallback>
                                     </Avatar>
                                 </TimelineStepsIcon>
@@ -69,7 +69,7 @@ export default function Education() {
                             <TimelineStepsHeader>
                                 <TimelineStepsIcon className="overflow-hidden p-0">
                                     <Avatar className="size-full">
-                                        <AvatarImage src="src/assets/ts-logo.png" alt="@user" />
+                                        <AvatarImage src="public/ts-logo.png" alt="@user" />
                                         <AvatarFallback>TS</AvatarFallback>
                                     </Avatar>
                                 </TimelineStepsIcon>
