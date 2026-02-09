@@ -39,117 +39,90 @@ interface ProjectData {
 
 const trafficSignProjectSections: ProjectSectionItem[] = [
   {
-    title: "Project Goal",
+    title: "Situation",
     items: [
-      "Built an intelligent educational tool that detects and explains South African traffic signs in real-time.",
-      "Designed to improve road safety awareness through interactive visual learning.",
-      "Created entirely from scratch in Java without using pre-made AI libraries (like TensorFlow or OpenCV), demonstrating deep understanding of core algorithms.",
+      "Computer vision is often treated as a 'black box' using heavy libraries like TensorFlow. I wanted to build an educational tool for South African road safety that not only detects signs but explains the logic behind the detection. The challenge was to build this intelligent system entirely from scratch in Java, without relying on pre-made AI or vision libraries like OpenCV.",
     ],
   },
   {
-    title: "Application Modules",
+    title: "Task",
     items: [
-      "Main Dashboard (The Hub): The entry point where users import images. It runs a quick 'Edge Detection' scan to verify a sign is present, drawing a bounding box around it as a sanity check before deep analysis.",
-      "GNN Analysis (The Classifier): Acts as the system's brain. It builds a dynamic graph connecting the input image to known signs, using a weighted voting system to predict the sign type and recommend driver actions (e.g., 'Stop').",
-      "KNN Analysis (Visual Search): Acts as the system's eyes. It performs a content-based search to find the top 4 visual matches in the database, explaining why they match by breaking down the score into Color vs. Shape similarity.",
+      "My goal was to develop a real-time application that could accept an image, isolate the traffic sign, and accurately classify it into Regulatory, Warning, or Informational categories. The system needed to be robust enough to handle variations in lighting and size, while providing a 'Visual Search' feature to show users similar signs for learning purposes.",
     ],
   },
   {
-    title: "How It Works (The Algorithms)",
+    title: "Action",
     items: [
-      "Custom-built a Graph Neural Network (GNN) to classify signs based on their relationships to known examples.",
-      "Implemented a 'Visual Search' engine (k-NN) that finds similar-looking signs by comparing their math-based features.",
-      "Uses custom similarity formulas to accurately match signs even if they are slightly different in size or lighting.",
-      "Smart logic allows the system to 'learn' from context, improving accuracy over time.",
+      "Vision Processing: Instead of standard filters, I wrote raw pixel manipulation algorithms to detect edges and filter specific color channels (Red, Blue, Yellow) to draw bounding boxes around potential signs.",
+      "The 'Brain' (GNN): I implemented a custom Graph Neural Network that builds a dynamic graph connecting input images to known signs, using a weighted voting system to predict the sign type.",
+      "The 'Eyes' (k-NN): I built a K-Nearest Neighbors algorithm for content-based retrieval. It calculates mathematical distance based on feature vectors (Color, Shape, Complexity) to find the top 4 visual matches in the database.",
+      "Visualization: I used JavaFX to render the interactive graph, allowing users to see the 'decision path' the AI took."
     ],
   },
   {
-    title: "Seeing the Signs (Image Processing)",
+    title: "Result",
     items: [
-      "Developed a custom vision pipeline that 'sees' images by detecting edges and filtering specific colors (Red, Blue, Yellow).",
-      "Extracts key features like Color, Shape (Triangle vs Circle), and Complexity to understand what a sign is.",
-      "Successfully categorizes signs into Regulatory, Warning, and Informational groups using a robust fallback system.",
-      "Designed to be easily expandable—new signs can be added to the database instantly without retraining the whole system.",
-    ],
-  },
-  {
-    title: "Tech Stack & Results",
-    items: [
-      "Language: Pure Java (JDK 17+).",
-      "Visualization: JavaFX (for the interactive graph display).",
-      "Result: A fast, functional tool that proves complex visual recognition can be built with fundamental data structures.",
+      "The final application successfully detects and categorizes South African traffic signs in real-time. It proves that complex visual recognition can be achieved with fundamental data structures and optimized math, rather than heavy dependencies. The system is modular, allowing new signs to be added to the database instantly without the need for expensive model retraining.",
     ],
   },
 ];
 
 const benchmarkTraderProjectSections: ProjectSectionItem[] = [
   {
-    title: "Project Overview",
+    title: "Situation",
     items: [
-      "Built a comprehensive online trading simulation that takes users from absolute beginners to confident traders. The platform offers a realistic, risk-free environment where users can practice buying and selling assets without the fear of losing real money.",
-      "Designed a complete 'dual-role' ecosystem that connects standard Users with professional Brokers. This simulates real-world market dynamics, allowing users to propose trades and brokers to review, approve, or reject them based on current market conditions.",
-      "Recognized for technical excellence by ranking #14 out of the Top 20 final-year projects at the University of Johannesburg. This achievement highlights the system's stability, innovative features, and professional-grade user experience.",
+      "Financial markets are intimidating for beginners, and practicing with real money is high-risk. I identified a need for a realistic, risk-free simulation environment that could bridge the gap between novice traders and professional brokers. I wanted to build a comprehensive 'dual - role' ecosystem that simulated real-world market dynamics, including trade proposals, approvals, and portfolio management.",
     ],
   },
   {
-    title: "How It Was Built",
+    title: "Task",
     items: [
-      "Started with extensive planning and blueprints (diagrams) to map out exactly how users would interact with the app. This ensured every feature—from logging in to withdrawing profits—felt intuitive and logical before a single line of code was written.",
-      "Developed a modern, responsive website using popular technologies like React and Tailwind CSS. This ensures the platform looks professional and works smoothly on any device, whether it's a large desktop monitor or a small laptop screen.",
-      "Created a fully functional companion mobile app using Flutter. This allows users to track their portfolios, check market prices, and chat with brokers while on the go, ensuring they never miss a trading opportunity.",
-      "Connected everything to a powerful, secure database (backend) that acts as the 'brain' of the operation. It instantly updates user balances, trade history, and messages across both the website and the mobile app simultaneously.",
+      "My objective was to build a cross-platform solution consisting of a responsive web dashboard and a companion mobile app. The critical technical challenge was ensuring perfect synchronization between the two platforms, allowing a user to start a trade on the web and manage it on their phone without data loss or latency, while also facilitating real-time communication between Users and Brokers.",
     ],
   },
   {
-    title: "Smart Features",
+    title: "Action",
     items: [
-      "Designed a unique 'Smart Match' algorithm that acts like a matchmaking service for finance. It asks users a series of simple questions to understand their risk tolerance and financial goals, then automatically pairs them with the broker best suited to their personality.",
-      "Automated the entire lifecycle of a trade to reduce manual work. When a user makes a profit, the system automatically handles the calculation and updates their 'wallet' balance, simulating a real-world withdrawal process without any friction.",
-      "Integrated a secure, WhatsApp-style messaging tool directly into the dashboard. This allows clients and brokers to discuss strategies, negotiate deals, and build trust without ever having to leave the platform.",
+      "Frontend Ecosystem: I developed the web platform using React and Tailwind CSS for a responsive, professional interface, and built a companion mobile app using Flutter for on-the-go portfolio tracking.",
+      "Algorithmic Logic: I engineered a 'Smart Match' algorithm that analyzes user inputs (risk tolerance, financial goals) to automatically pair them with the most suitable broker.",
+      "Real-Time Architecture: I implemented a unified backend that acts as the 'brain', instantly synchronizing balances, trade history, and 'WhatsApp - style' messaging across both the web and mobile instances simultaneously.",
+      "Automation: I automated the trade lifecycle, writing logic to handle profit calculations and wallet updates instantly upon trade completion, removing manual friction.",
     ],
   },
   {
-    title: "Key Highlights",
+    title: "Result",
     items: [
-      "Features a live 'Market Dashboard' that displays real-time financial news and interactive price charts. This helps users learn how to analyze market trends and make informed decisions rather than just guessing.",
-      "Ensures perfect synchronization between devices. If a user starts a trade on their computer, they can immediately see it and continue managing it on their phone without any delay or data loss.",
-      "Prioritized a clean, user-friendly design (UI/UX) that hides the complex math and logic behind simple buttons. This makes the intimidating world of stock trading feel accessible and easy to navigate for everyone.",
+      "The project was recognized for its technical excellence and stability, ranking #14 out of the Top 20 final-year projects at the University of Johannesburg. It successfully delivers a professional-grade user experience where users can practice trading strategies in a risk-free environment, supported by robust, real-time cross-platform synchronization."
     ],
   },
 ];
 
 const aThriftersProjectSections: ProjectSectionItem[] = [
   {
-    title: "Project Scope & Architecture",
+    title: "Situation",
     items: [
-      "Designed a complete e-commerce solution simulating a real-world circular economy marketplace for pre-loved clothing.",
-      "Architected a scalable Service-Oriented Architecture (SOA) that strictly separates the frontend (ASP.NET) from business logic (WCF Services).",
-      "Demonstrated enterprise-level development skills by moving beyond simple CRUD to implement complex transactional workflows.",
+      "The 'fast fashion' industry creates immense waste, and existing second-hand markets often lack the robust features of modern e-commerce platforms. I saw an opportunity to build a circular economy marketplace that could handle complex transactions while simulating a real-world enterprise environment.",
     ],
   },
   {
-    title: "Core Functionalities",
+    title: "Task",
     items: [
-      "Built a secure Role-Based Authentication system that provides distinct dashboards and capabilities for Customers versus Managers.",
-      "Engineered a smart Shopping Cart using Session state to persist user selections across the application.",
-      "Implemented a 'Manager Dashboard' that allows administrators to upload products, track inventory in real-time, and manage customer orders.",
-      "Created a dynamic catalog with filtering and search capabilities, backed by efficient SQL queries.",
+      "My goal was to architect a scalable, secure e-commerce solution that strictly separated the frontend from the business logic. I needed to move beyond simple CRUD operations to implement complex transactional workflows, including role-based access control (RBAC), inventory management, and secure checkout processes.",
     ],
   },
   {
-    title: "Backend & Data Integrity",
+    title: "Action",
     items: [
-      "Developed a decoupled WCF Service layer in C# to handle all data access, ensuring the frontend never touches the database directly.",
-      "Utilized LINQ to SQL for type-safe database interactions, preventing common errors and security vulnerabilities.",
-      "Designed a normalized Microsoft SQL Server database schema to maintain data integrity across users, products, and invoices.",
+      "Architecture: I decoupled the application layers by building a WCF Service layer in C# to handle all data access. This ensures the frontend (ASP.NET) never interacts directly with the database, significantly improving security.",
+      "Data Integrity: I utilized LINQ to SQL for type-safe database interactions and designed a normalized Microsoft SQL Server schema to maintain integrity across users, products, and invoices.",
+      "Business Logic: I implemented a transactional checkout engine that automatically calculates VAT, validates stock levels in real-time, and generates invoices instantly.",
+      "Security: I built a custom Role-Based Authentication system to provide distinct, secure dashboards for 'Customers' (shopping, tracking) versus 'Managers' (inventory, sales reports)."
     ],
   },
   {
-    title: "Technical Highlights",
+    title: "Result",
     items: [
-      "Implemented a transactional checkout engine that calculates VAT, validates stock levels, and generates invoices instantly.",
-      "Used Bootstrap to create a responsive, modern UI that works seamlessly across desktop and mobile devices.",
-      "Integrated comprehensive error handling and input validation to ensure application stability and security.",
+      "The final application is a robust, full-stack e-commerce platform that demonstrates enterprise-level development practices. It successfully handles the entire lifecycle of a purchase—from product discovery to invoicing—within a secure, scalable architecture that mimics professional software environments.",
     ],
   },
 ];
@@ -233,7 +206,7 @@ export const allProjects: ProjectData[] = [
     date: "Dec 2025 -Jan 2026",
     description: (
       <p>
-        A-Thrifters is a robust, full-stack e-commerce platform built to simulate a high-traffic retail environment. Architected using a <span className="text-green-400">Service-Oriented Architecture (SOA)</span>, it separates the ASP.NET frontend from the business logic layer using WCF Services. The system features a complex <span className="text-green-400">transactional checkout engine</span>, real-time stock tracking, and a secure Manager Dashboard for inventory control. It demonstrates the ability to build scalable, multi-tier enterprise applications using the .NET ecosystem.
+        A-Thrifters is a robust, full-stack e-commerce platform built to simulate a high-traffic retail environment. The application supports two distinct user ecosystems: a Customer portal featuring a <span className="text-green-400">dynamic product catalog</span> with advanced filtering and persistent shopping carts using Session State, and a secure Manager Dashboard for real-time <span className="text-green-400">inventory control</span> and order management. Architected using a <span className="text-green-400">Service-Oriented Architecture (SOA)</span>, the system strictly separates the ASP.NET frontend from business logic using WCF Services. The backend powers a complex <span className="text-green-400">transactional checkout engine</span> that handles VAT calculations, invoice generation, and atomic stock updates via <span className="text-green-400">LINQ to SQL</span>.
       </p>
     ),
     techStack: [
