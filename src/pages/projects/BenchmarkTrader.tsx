@@ -37,41 +37,127 @@ export default function ProjectBenchmarkTrader() {
         <div className="min-h-screen text-white font-mono w-full p-10 bg-black">
             <div className="max-w-6xl mx-auto py-10">
 
-                <div className="flex items-center justify-center gap-4 mb-2">
+                {/* --- HEADER ROW (Back Button + Logo) --- */}
+                <div className="relative flex items-center justify-center mb-6">
+
+                    {/* Back Button: Absolute Left, Vertically Centered */}
+                    <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
+                        <a
+                            href="/"
+                            className="text-white  text-sm md:text-base flex items-center gap-2"
+                        >
+                            <span>&larr;</span>
+                            <span className="hidden md:inline">Back</span>
+                            <span className="md:hidden">Back</span>
+                        </a>
+                    </div>
+
+                    {/* Logo: Centered */}
                     <img
                         src={btLogo}
                         alt="Benchmark Trader Logo"
-                        className="w-12 h-12 md:w-16 md:h-16"
+                        className="w-12 h-12 md:w-16 md:h-16 relative z-0"
                     />
                 </div>
 
-                {/* --- HEADER --- */}
+                {/* --- HEADER TITLE --- */}
                 <div className="flex items-center justify-center gap-4 mb-2">
-
                     <ShinyText
                         text={project.title}
                         disabled={false}
                         speed={3}
                         className="text-3xl font-bold text-center md:text-4xl"
                     />
-
-
                 </div>
 
                 {/* --- DATE / SUBTITLE --- */}
-                <p className="text-gray-400 text-center mb-10">
+                <p className="text-gray-400 text-center mb-12">
                     {project.date}
                 </p>
 
-                {/* --- DYNAMIC SECTIONS --- */}
-                <div className="grid gap-6 mb-12">
-                    {project.sections.map((section, index) => (
-                        <Description
-                            key={index}
-                            title={section.title}
-                            items={section.items}
-                        />
-                    ))}
+                {/* --- DYNAMIC SECTIONS (Grid Layout) --- */}
+                <div className="flex flex-col gap-6 mb-12">
+
+                    {/* Row 1: First two sections side-by-side */}
+                    {project.sections.length >= 2 && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <Description
+                                title={project.sections[0].title}
+                                items={project.sections[0].items}
+                            />
+                            <Description
+                                title={project.sections[1].title}
+                                items={project.sections[1].items}
+                            />
+                        </div>
+                    )}
+
+                    {/* Row 2: Third section full width */}
+                    {project.sections.length >= 3 && (
+                        <div className="w-full">
+                            <Description
+                                title={project.sections[2].title}
+                                items={project.sections[2].items}
+                            />
+                        </div>
+                    )}
+
+                    {/* Row 3: Fourth section (left) & Tech Stack (right) */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                        <div className="lg:col-span-1">
+                            {project.sections.length >= 4 && (
+                                <Description
+                                    title={project.sections[3].title}
+                                    items={project.sections[3].items}
+                                />
+                            )}
+                        </div>
+
+                        {/* Tech Stack Column */}
+                        <div className="lg:col-span-1">
+                            <h2 className="text-lg text-blue-500 mb-4 font-semibold text-center">
+                                Tech Stack
+                            </h2>
+
+                            <div className="flex flex-wrap gap-2 mb-6 justify-center">
+                                {project.techStack.map((tech) => (
+                                    <span
+                                        key={tech}
+                                        className="bg-[#0e1620] border border-blue-800 
+                                    text-blue-100 px-3 py-1 rounded-md text-xs flex 
+                                    items-center gap-2 transition-all duration-300 
+                                    ease-in-out hover:border-blue-500 hover:shadow-lg 
+                                    hover:shadow-blue-500/25 hover:scale-105 
+                                    hover:bg-[#0e1620] cursor-pointer"
+                                    >
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+
+                            {/* External Link Button */}
+                            {project.externalLink && (
+                                <div className="mt-auto">
+                                    <a
+                                        href={project.externalLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center
+                                    bg-[#161921] border border-gray-700
+                                    text-gray-100 px-4 py-2 rounded-md
+                                    text-sm transition-all duration-300
+                                    ease-in-out hover:border hover:border-blue-500
+                                    hover:shadow-lg hover:shadow-blue-500/25
+                                    hover:scale-105 hover:bg-blue-900"
+                                    >
+                                        View Marketing Website
+                                        <FontAwesomeIcon icon={faExternalLinkAlt} className="w-4 h-4 ml-2 group-hover:text-blue-400" />
+                                    </a>
+                                </div>
+                            )}
+                        </div>
+                    </div>
                 </div>
 
                 {/* --- GALLERY SECTION --- */}
@@ -115,54 +201,6 @@ export default function ProjectBenchmarkTrader() {
                         </div>
                     </div>
                 )}
-
-                {/* --- TECH STACK --- */}
-                <div className="mt-12 text-center">
-                    <h2 className="text-2xl text-green-300 mb-4">Core Technologies</h2>
-                    <div className="flex flex-wrap justify-center gap-2">
-                        {project.techStack.map((tech) => (
-                            <span
-                                key={tech}
-                                className="bg-[#0e2016] border border-green-800 
-                                    text-green-100 px-3 py-1 rounded-md text-sm flex 
-                                    items-center gap-2 transition-all duration-300 
-                                    ease-in-out hover:border-green-400 hover:shadow-lg 
-                                    hover:shadow-green-500/25 hover:scale-105 
-                                    hover:bg-[#0f2a1d] cursor-pointer"
-                            >
-                                {tech}
-                            </span>
-                        ))}
-                    </div>
-
-                    {/* External Link Button */}
-                    {project.externalLink && (
-                        <div className="mt-8">
-                            <a
-                                href={project.externalLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center
-                                    bg-[#161921] border border-gray-700
-                                    text-gray-100 px-4 py-2 rounded-md
-                                    text-sm transition-all duration-300
-                                    ease-in-out hover:border hover:border-green-400
-                                    hover:shadow-lg hover:shadow-green-500/25
-                                    hover:scale-105 hover:bg-green-900"
-                            >
-                                View Marketing Website
-                                <FontAwesomeIcon icon={faExternalLinkAlt} className="w-4 h-4 ml-2" />
-                            </a>
-                        </div>
-                    )}
-                </div>
-
-                {/* --- FOOTER --- */}
-                <div className="text-center mt-12">
-                    <a href="/" className="text-green-400 hover:text-green-300 underline transition-colors duration-300">
-                        &larr; Back to Portfolio
-                    </a>
-                </div>
             </div>
         </div>
     );
