@@ -10,6 +10,7 @@ import {
   faCss3Alt,
   faJava,
   faMicrosoft,
+  faBootstrap,
   type IconDefinition,
 } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -43,6 +44,15 @@ export const skillIcons: { [key: string]: IconDefinition } = {
   GNN: faMicrochip,
   "k-NN": faMicrochip,
   "80x86 Assembly": faMicrochip,
+  "ASP.NET": faMicrosoft,
+  "ASP.NET Web Forms": faMicrosoft,
+  WCF: faMicrosoft,
+  "WCF Services": faMicrosoft,
+  "SQL Server": faDatabase,
+  LINQ: faDatabase,
+  Bootstrap: faBootstrap,
+  "Tailwind CSS": faCss3Alt,
+  JavaFX: faJava,
 };
 
 // Export the necessary types/components for use

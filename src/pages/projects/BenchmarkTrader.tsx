@@ -1,5 +1,6 @@
 // src/pages/ProjectBenchmarkTrader.tsx
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Description from '../../components/Description';
 import { allProjects } from '../../data/projectsData';
 import ShinyText from '../../components/ShinyText';
@@ -42,14 +43,13 @@ export default function ProjectBenchmarkTrader() {
 
                     {/* Back Button: Absolute Left, Vertically Centered */}
                     <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
-                        <a
-                            href="/"
-                            className="text-white  text-sm md:text-base flex items-center gap-2"
+                        <Link
+                            to="/"
+                            className="text-white text-sm md:text-base flex items-center gap-2"
                         >
                             <span>&larr;</span>
-                            <span className="hidden md:inline">Back</span>
-                            <span className="md:hidden">Back</span>
-                        </a>
+                            <span>Back</span>
+                        </Link>
                     </div>
 
                     {/* Logo: Centered */}
@@ -67,6 +67,7 @@ export default function ProjectBenchmarkTrader() {
                         disabled={false}
                         speed={3}
                         className="text-3xl font-bold text-center md:text-4xl"
+                        as="h1"
                     />
                 </div>
 
@@ -177,6 +178,7 @@ export default function ProjectBenchmarkTrader() {
                             {/* Navigation Buttons */}
                             <button
                                 onClick={prevImage}
+                                aria-label="Previous image"
                                 className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-green-500/80 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm border border-gray-600 hover:border-green-400 z-10"
                             >
                                 &#10094;
@@ -184,6 +186,7 @@ export default function ProjectBenchmarkTrader() {
 
                             <button
                                 onClick={nextImage}
+                                aria-label="Next image"
                                 className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-green-500/80 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm border border-gray-600 hover:border-green-400 z-10"
                             >
                                 &#10095;

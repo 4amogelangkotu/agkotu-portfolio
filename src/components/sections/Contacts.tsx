@@ -14,36 +14,23 @@ interface SocialLinkProps {
 }
 
 function SocialLink({ platform, handle, icon, url }: SocialLinkProps) {
-    const handleClick = () => {
-        window.open(url, '_blank', 'noopener,noreferrer');
-    };
-
     return (
-        <div className="bg-[#161b21] p-4 rounded-lg flex items-center transition-all duration-300 ease-in-out hover:border hover:border-green-400 hover:shadow-lg hover:shadow-green-500/25 hover:scale-105 hover:bg-[#1d242c] cursor-pointer"
-            onClick={handleClick}>
+        <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#161b21] p-4 rounded-lg flex items-center transition-all duration-300 ease-in-out hover:border hover:border-green-400 hover:shadow-lg hover:shadow-green-500/25 hover:scale-105 hover:bg-[#1d242c] cursor-pointer"
+        >
             {icon}
             <div>
                 <div className="font-semibold">{platform}</div>
                 <div className="text-sm text-gray-400">{handle}</div>
             </div>
-        </div>
+        </a>
     );
 }
 
 export default function Contacts() {
-    const handleDownloadCV = () => {
-        const link = document.createElement('a');
-        link.href = cvFile;
-        link.download = 'agkotu-cv.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
-
-    const handleEmailClick = () => {
-        window.location.href = 'mailto:amogelangkotu@icloud.com';
-    };
-
     const socialLinks = [
         {
             platform: "GitHub",
@@ -95,21 +82,26 @@ export default function Contacts() {
                         <div className="mb-2">
                             <span className="text-green-400">$ contact --email</span>
                         </div>
-                        <div className="bg-green-900 text-green-100 px-4 py-2 rounded-md inline-block transition-all duration-300 ease-in-out hover:border hover:border-green-400 hover:shadow-lg hover:shadow-green-500/25 hover:scale-105 hover:bg-green-800 cursor-pointer"
-                            onClick={handleEmailClick}>
+                        <a
+                            href="mailto:amogelangkotu@icloud.com"
+                            className="bg-green-900 text-green-100 px-4 py-2 rounded-md inline-block transition-all duration-300 ease-in-out hover:border hover:border-green-400 hover:shadow-lg hover:shadow-green-500/25 hover:scale-105 hover:bg-green-800 cursor-pointer"
+                        >
                             amogelangkotu@icloud.com
-                        </div>
+                        </a>
                     </div>
 
                     <div className="mb-6">
                         <div className="mb-2">
                             <span className="text-green-400">$ ag-kotu-cv.pdf</span>
                         </div>
-                        <button className="bg-green-900 text-green-100 px-4 py-2 rounded-md flex items-center transition-all duration-300 ease-in-out hover:border hover:border-green-400 hover:shadow-lg hover:shadow-green-500/25 hover:scale-105 hover:bg-green-800 cursor-pointer"
-                            onClick={handleDownloadCV}>
+                        <a
+                            href={cvFile}
+                            download="agkotu-cv.pdf"
+                            className="bg-green-900 text-green-100 px-4 py-2 rounded-md inline-flex items-center transition-all duration-300 ease-in-out hover:border hover:border-green-400 hover:shadow-lg hover:shadow-green-500/25 hover:scale-105 hover:bg-green-800 cursor-pointer"
+                        >
                             <FontAwesomeIcon icon={faDownload} className="w-5 h-5 mr-2" />
                             Download CV
-                        </button>
+                        </a>
                     </div>
 
                     <div className="mb-4">

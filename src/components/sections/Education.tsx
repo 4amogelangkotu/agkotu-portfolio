@@ -1,7 +1,7 @@
 // components/Education.tsx
 
 import ShinyText from "../ShinyText";
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import {
@@ -27,6 +27,7 @@ export default function Education() {
                         disabled={false}
                         speed={3}
                         className="text-4xl font-bold"
+                        as="h2"
                     />
                 </div>
 
@@ -43,12 +44,6 @@ export default function Education() {
                                 </TimelineStepsIcon>
                                 <div className="flex flex-col gap-0.5">
                                     <TimelineStepsTitle className="text-2xl text-white font-bold">
-                                        {/* <ShinyText
-                                            text="University of Johannesburg"
-                                            disabled={false}
-                                            speed={3}
-                                            className="text-2xl font-bold"
-                                        /> */}
                                         <h3>University of Johannesburg</h3>
                                     </TimelineStepsTitle>
                                     <TimelineStepsTime >
@@ -75,12 +70,6 @@ export default function Education() {
                                 </TimelineStepsIcon>
                                 <div className="flex flex-col gap-0.5">
                                     <TimelineStepsTitle className="text-2xl text-white font-bold">
-                                        {/* <ShinyText
-                                            text="Tsogo Secondary School"
-                                            disabled={false}
-                                            speed={3}
-                                            className="text-2xl font-bold"
-                                        /> */}
                                         <h3>Tsogo Secondary School</h3>
                                     </TimelineStepsTitle>
                                     <TimelineStepsTime>2016 - 2020</TimelineStepsTime>
@@ -95,28 +84,17 @@ export default function Education() {
                                 </TimelineStepsDescription>
                             </TimelineStepsContent>
                         </TimelineStepsItem>
-                        {/* <TimelineStepsItem>
-                            <TimelineStepsConnector />
-                            <TimelineStepsHeader>
-                                <TimelineStepsIcon className="overflow-hidden p-0">
-                                    <Avatar className="size-full">
-                                        <AvatarImage src="src/assets/logo.png" alt="@user" />
-                                        <AvatarFallback>...</AvatarFallback>
-                                    </Avatar>
-                                </TimelineStepsIcon>
-                                <div className="flex flex-col gap-0.5">
-                                    <TimelineStepsTitle className=" text-white">
-                                        <Link to="/education">
-                                            see more...
-                                        </Link>
-                                    </TimelineStepsTitle>
-                                    <TimelineStepsTime></TimelineStepsTime>
-
-                                </div>
-                            </TimelineStepsHeader>
-                        </TimelineStepsItem> */}
                     </TimelineSteps>
 
+                </div>
+
+                <div className="text-center mt-8">
+                    <Link
+                        to="/education"
+                        className="text-green-400 hover:text-green-300 underline underline-offset-4 text-sm"
+                    >
+                        See full coursework &rarr;
+                    </Link>
                 </div>
             </div>
         </section>

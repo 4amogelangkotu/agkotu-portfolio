@@ -74,9 +74,13 @@ Serves the production build locally.
 ``` text
 .
 ├── public
+│   ├── og-image.png
+│   ├── ts-logo.png
+│   ├── uj-logo.png
 │   └── vite.svg
 ├── src
 │   ├── assets
+│   │   ├── at, bt, sc, tsd    # per-project logos and gallery screenshots
 │   │   └── a-logo.svg
 │   ├── components
 │   │   ├── sections
@@ -85,21 +89,31 @@ Serves the production build locally.
 │   │   │   ├── Header.tsx
 │   │   │   └── Projects.tsx
 │   │   ├── ui
-│   │   │   └── button.tsx
+│   │   │   ├── avatar.tsx
+│   │   │   ├── button.tsx
+│   │   │   ├── border-trail.tsx
+│   │   │   └── timeline-steps.tsx
 │   │   ├── Description.tsx
-│   │   ├── FallingText.tsx
-│   │   ├── GlareHover.tsx
 │   │   ├── LetterGlitch.tsx
-│   │   ├── ScrollStack.tsx
 │   │   ├── ShinyText.tsx
-│   │   ├── Squares.tsx
+│   │   ├── skillIcons.ts
 │   │   └── TerminalWindowBar.tsx
+│   ├── data
+│   │   └── projectsData.tsx
 │   ├── lib
 │   │   └── utils.ts
+│   ├── pages
+│   │   ├── projects
+│   │   │   ├── AThrifters.tsx
+│   │   │   ├── BenchmarkTrader.tsx
+│   │   │   └── TrafficSignDetector.tsx
+│   │   ├── EducationPage.tsx
+│   │   └── NotFoundPage.tsx
 │   ├── App.css
 │   ├── App.tsx
 │   ├── index.css
-│   └── main.tsx
+│   ├── main.tsx
+│   └── routes.ts
 ├── .gitignore
 ├── index.html
 ├── package.json

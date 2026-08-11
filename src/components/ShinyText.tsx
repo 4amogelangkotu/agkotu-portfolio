@@ -5,13 +5,14 @@ interface ShinyTextProps {
   disabled?: boolean;
   speed?: number;
   className?: string;
+  as?: 'div' | 'span' | 'h1' | 'h2' | 'h3';
 }
 
-const ShinyText: React.FC<ShinyTextProps> = ({ text, disabled = false, speed = 5, className = '' }) => {
+const ShinyText: React.FC<ShinyTextProps> = ({ text, disabled = false, speed = 5, className = '', as: Tag = 'div' }) => {
   const animationDuration = `${speed}s`;
 
   return (
-    <div
+    <Tag
       className={`text-[#b5b5b5a4] bg-clip-text inline-block ${disabled ? '' : 'animate-shine'} ${className}`}
       style={{
         backgroundImage:
@@ -22,26 +23,8 @@ const ShinyText: React.FC<ShinyTextProps> = ({ text, disabled = false, speed = 5
       }}
     >
       {text}
-    </div>
+    </Tag>
   );
 };
 
 export default ShinyText;
-
-// tailwind.config.js
-// module.exports = {
-//   theme: {
-//     extend: {
-//       keyframes: {
-//         shine: {
-//           '0%': { 'background-position': '100%' },
-//           '100%': { 'background-position': '-100%' },
-//         },
-//       },
-//       animation: {
-//         shine: 'shine 5s linear infinite',
-//       },
-//     },
-//   },
-//   plugins: [],
-// };

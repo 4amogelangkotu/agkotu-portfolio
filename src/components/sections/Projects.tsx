@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
-// import Description from "../Description"; // Keeping this import in case you use it elsewhere
 import ShinyText from "../ShinyText";
 import TerminalWindowBar from "../TerminalWindowBar";
 import { allProjects } from '../../data/projectsData';
 import { faArrowRight, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-// import { skillIcons, FontAwesomeIcon, faCode } from '../../components/skillIcons';
+import { skillIcons, faCode } from "../skillIcons";
 
 export default function Projects() {
     return (
@@ -19,6 +18,7 @@ export default function Projects() {
                         disabled={false}
                         speed={3}
                         className="text-3xl font-bold"
+                        as="h2"
                     />
                 </div>
 
@@ -64,10 +64,10 @@ export default function Projects() {
                                     hover:shadow-green-500/25 hover:scale-105 
                                     hover:bg-[#0f2a1d] cursor-pointer"
                                 >
-                                    {/* <FontAwesomeIcon
+                                    <FontAwesomeIcon
                                         icon={skillIcons[tech] || faCode}
                                         className="w-4 h-4"
-                                    /> */}
+                                    />
                                     {tech}
                                 </span>
                             ))}

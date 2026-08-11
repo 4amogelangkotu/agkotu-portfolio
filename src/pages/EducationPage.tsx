@@ -14,7 +14,8 @@ export default function EducationPage() {
                         text="Education"
                         disabled={false}
                         speed={3}
-                        className="text-5xl font-bold" />
+                        className="text-5xl font-bold"
+                        as="h1" />
                 </div>
 
 
@@ -22,16 +23,18 @@ export default function EducationPage() {
                 <p>
                     Courses:
                 </p>
-                <li>Introduction to Algorithm Development <span className="text-blue-400">VB, C++</span></li>
-                <li>Introduction to Data Structures <span className="text-blue-400">VB, C++</span></li>
-                <li>Object-Oriented Programming <span className="text-blue-400">Java</span></li>
-                <li>Data Communications <span className="text-blue-400">Java</span></li>
-                <li>Database Design <span className="text-blue-400">SQL</span></li>
-                <li>Internet Electronic Commerce <span className="text-blue-400">HTML, CSS, JavaScript, ASP.Net, C#, SQL</span></li>
-                <li>Advanced Data Structures and Algorithms <span className="text-blue-400">Java</span></li>
-                <li>Operating System Concepts <span className="text-blue-400">80x86 Assembly</span></li>
-                <li>Introduction to Software Engineering <span className="text-blue-400">Software Design</span></li>
-                <li>Advanced Software Engineering <span className="text-blue-400">Development, Testing, Deployment</span></li>
+                <ul>
+                    <li>Introduction to Algorithm Development <span className="text-blue-400">VB, C++</span></li>
+                    <li>Introduction to Data Structures <span className="text-blue-400">VB, C++</span></li>
+                    <li>Object-Oriented Programming <span className="text-blue-400">Java</span></li>
+                    <li>Data Communications <span className="text-blue-400">Java</span></li>
+                    <li>Database Design <span className="text-blue-400">SQL</span></li>
+                    <li>Internet Electronic Commerce <span className="text-blue-400">HTML, CSS, JavaScript, ASP.Net, C#, SQL</span></li>
+                    <li>Advanced Data Structures and Algorithms <span className="text-blue-400">Java</span></li>
+                    <li>Operating System Concepts <span className="text-blue-400">80x86 Assembly</span></li>
+                    <li>Introduction to Software Engineering <span className="text-blue-400">Software Design</span></li>
+                    <li>Advanced Software Engineering <span className="text-blue-400">Development, Testing, Deployment</span></li>
+                </ul>
 
                 <div className="flex flex-wrap gap-2">
                     {technologies.map((tech) => (

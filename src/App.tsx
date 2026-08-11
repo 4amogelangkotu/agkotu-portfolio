@@ -4,14 +4,13 @@ import Contacts from './components/sections/Contacts';
 import Projects from './components/sections/Projects';
 import LetterGlitch from './components/LetterGlitch';
 
-// No changes needed in App.tsx. It remains the content for the '/' route.
 export default function App() {
   const headerData = {
     name: "Amogelang Gift Kotu",
     title: "Junior Full-Stack Developer",
-    skills: ['Visual Basic', 'C++', 'Java', 'SQL', 'C#', 'HTML', 'CSS',
-      'JavaScript', 'TypeScript', 'React', 'Node.js', 'Express',
-      'Supabase', 'Git', '80x86 Assembly']
+    skills: ['Visual Basic', 'C++', 'Java', 'SQL', 'SQL Server', 'C#', 'ASP.NET', 'WCF', 'LINQ',
+      'HTML', 'CSS', 'Tailwind CSS', 'Bootstrap', 'JavaScript', 'TypeScript', 'React', 'Node.js',
+      'Express', 'Prisma', 'Supabase', 'Flutter', 'UML', 'Git', '80x86 Assembly']
   };
 
   return (

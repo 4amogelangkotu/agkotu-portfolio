@@ -9,6 +9,7 @@ import ProjectTrafficSign from "./pages/projects/TrafficSignDetector";
 import ProjectBenchmarkTrader from "./pages/projects/BenchmarkTrader";
 import ProjectEThrifting from "./pages/projects/AThrifters";
 import EducationPage from "./pages/EducationPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 export const router = createBrowserRouter([
   {
@@ -35,13 +36,12 @@ export const router = createBrowserRouter([
         path: "/education",
         element: React.createElement(EducationPage),
       },
+      {
+        path: "*",
+        element: React.createElement(NotFoundPage),
+      },
     ],
   },
-  // Optionally, you can add a catch-all route for 404 pages
-  // {
-  //   path: '*',
-  //   element: <NotFoundPage />,
-  // },
 ]);
 
 export default router;

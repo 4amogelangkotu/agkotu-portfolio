@@ -190,29 +190,60 @@ const LetterGlitch = ({
     const canvas = canvasRef.current;
     if (!canvas) return;
 
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     context.current = canvas.getContext('2d');
     resizeCanvas();
-    animate();
+
+    if (prefersReducedMotion) {
+      // Draw a single static frame and skip the animation loop entirely.
+      return;
+    }
+
+    const startAnimation = () => {
+      if (!animationRef.current) {
+        animate();
+      }
+    };
+
+    const stopAnimation = () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+        animationRef.current = null;
+      }
+    };
+
+    startAnimation();
+
+    // Pause the redraw loop while the canvas is scrolled off-screen.
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          startAnimation();
+        } else {
+          stopAnimation();
+        }
+      },
+      { threshold: 0 }
+    );
+    observer.observe(canvas);
 
     let resizeTimeout: number;
 
     const handleResize = () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = window.setTimeout(() => {
-        if (animationRef.current) {
-          cancelAnimationFrame(animationRef.current);
-        }
+        stopAnimation();
         resizeCanvas();
-        animate();
+        startAnimation();
       }, 100);
     };
 
     window.addEventListener('resize', handleResize);
 
     return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
+      stopAnimation();
+      observer.disconnect();
       clearTimeout(resizeTimeout);
       window.removeEventListener('resize', handleResize);
     };
