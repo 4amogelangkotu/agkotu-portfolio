@@ -71,7 +71,7 @@ const benchmarkTraderProjectSections: ProjectSectionItem[] = [
   {
     title: "Situation",
     items: [
-      "Financial markets are intimidating for beginners, and practicing with real money is high-risk. I identified a need for a realistic, risk-free simulation environment that could bridge the gap between novice traders and professional brokers. I wanted to build a comprehensive 'dual - role' ecosystem that simulated real-world market dynamics, including trade proposals, approvals, and portfolio management.",
+      "Financial markets are intimidating for beginners, and practicing with real money is high-risk. I identified a need for a realistic, risk-free simulation environment that could bridge the gap between novice traders and professional brokers. I wanted to build a comprehensive 'dual-role' ecosystem that simulated real-world market dynamics, including trade proposals, approvals, and portfolio management.",
     ],
   },
   {
@@ -85,7 +85,7 @@ const benchmarkTraderProjectSections: ProjectSectionItem[] = [
     items: [
       "Frontend Ecosystem: I developed the web platform using React and Tailwind CSS for a responsive, professional interface, and built a companion mobile app using Flutter for on-the-go portfolio tracking.",
       "Algorithmic Logic: I engineered a 'Smart Match' algorithm that analyzes user inputs (risk tolerance, financial goals) to automatically pair them with the most suitable broker.",
-      "Real-Time Architecture: I implemented a unified backend that acts as the 'brain', instantly synchronizing balances, trade history, and 'WhatsApp - style' messaging across both the web and mobile instances simultaneously.",
+      "Real-Time Architecture: I implemented a unified backend that acts as the 'brain', instantly synchronizing balances, trade history, and 'WhatsApp-style' messaging across both the web and mobile instances simultaneously.",
       "Automation: I automated the trade lifecycle, writing logic to handle profit calculations and wallet updates instantly upon trade completion, removing manual friction.",
     ],
   },
@@ -183,8 +183,8 @@ export const allProjects: ProjectData[] = [
     date: "Feb 2025 - Oct 2025 | Ranked #14 in UJ ACSSE Top 20 Projects",
     description: (
       <p>
-        Benchmark Trader is a comprehensive full-stack demo trading platform, designed and developed from concept to deployment. The platform utilizes a robust system architecture, including a backend built with Node.js and Prisma and a responsive frontend using React, TypeScript, and Tailwind CSS. A key feature is the smart matching algorithm that pairs users with brokers based on a dynamic <span className="text-green-400">risk-assessment questionnaire</span>.The system handles the complete trade lifecycle and features <span className="text-green-400">real-time financial analytics, secure direct messaging, and cross-platform accessibility</span> via a companion Flutter mobile application.
-      </p >
+        Benchmark Trader is a comprehensive full-stack demo trading platform, designed and developed from concept to deployment. The platform utilizes a robust system architecture, including a backend built with Node.js and Prisma and a responsive frontend using React, TypeScript, and Tailwind CSS. A key feature is the smart matching algorithm that pairs users with brokers based on a dynamic <span className="text-green-400">risk-assessment questionnaire</span>. The system handles the complete trade lifecycle and features <span className="text-green-400">real-time financial analytics, secure direct messaging, and cross-platform accessibility</span> via a companion Flutter mobile application.
+      </p>
     ),
     techStack: [
       "React",
@@ -203,7 +203,7 @@ export const allProjects: ProjectData[] = [
   {
     id: "a-thrifters",
     title: "A-Thrifters",
-    date: "Dec 2025 -Jan 2026",
+    date: "Dec 2025 - Jan 2026",
     description: (
       <p>
         A-Thrifters is a robust, full-stack e-commerce platform built to simulate a high-traffic retail environment. The application supports two distinct user ecosystems: a Customer portal featuring a <span className="text-green-400">dynamic product catalog</span> with advanced filtering and persistent shopping carts using Session State, and a secure Manager Dashboard for real-time <span className="text-green-400">inventory control</span> and order management. Architected using a <span className="text-green-400">Service-Oriented Architecture (SOA)</span>, the system strictly separates the ASP.NET frontend from business logic using WCF Services. The backend powers a complex <span className="text-green-400">transactional checkout engine</span> that handles VAT calculations, invoice generation, and atomic stock updates via <span className="text-green-400">LINQ to SQL</span>.
