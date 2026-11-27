@@ -38,7 +38,7 @@ export default function Education() {
                             <TimelineStepsHeader>
                                 <TimelineStepsIcon className="overflow-hidden p-0">
                                     <Avatar className="size-full">
-                                        <AvatarImage src="/uj-logo.png" alt="@shadcn" />
+                                        <AvatarImage src="/uj-logo.png" alt="University of Johannesburg logo" />
                                         <AvatarFallback>UJ</AvatarFallback>
                                     </Avatar>
                                 </TimelineStepsIcon>
@@ -64,7 +64,7 @@ export default function Education() {
                             <TimelineStepsHeader>
                                 <TimelineStepsIcon className="overflow-hidden p-0">
                                     <Avatar className="size-full">
-                                        <AvatarImage src="/ts-logo.png" alt="@user" />
+                                        <AvatarImage src="/ts-logo.png" alt="Tsogo Secondary School logo" />
                                         <AvatarFallback>TS</AvatarFallback>
                                     </Avatar>
                                 </TimelineStepsIcon>
